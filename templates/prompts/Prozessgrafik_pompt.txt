@@ -1,0 +1,67 @@
+Erstelle eine didaktisch hochwertige SVG-Prozessgrafik für die Berufsbildung (EFZ Applikationsentwicklung, Schweiz).
+
+──────────────────────────────
+THEMA
+──────────────────────────────
+[THEMA einsetzen, z. B. Maven Build, CI/CD Pipeline, Programmablauf]
+
+LERNZIEL
+──────────────────────────────
+Die Lernenden verstehen:
+- den Ablauf Schritt für Schritt
+- Inputs und Outputs
+- kritische Punkte
+
+──────────────────────────────
+INHALT
+──────────────────────────────
+- 4–6 Prozessschritte (links → rechts)
+- klare Bezeichnung pro Schritt
+- optional: Fehler / Hinweise / Entscheidungen
+- optional: Tools (z. B. Jenkins, Maven)
+
+Zusammenfassung:
+- 4–6 Kernaussagen
+
+──────────────────────────────
+LAYOUT (VERPFLICHTEND)
+──────────────────────────────
+- horizontaler Ablauf (links → rechts)
+- gleich grosse Schritte
+- Pfeile zwischen allen Schritten
+- Zusatzinfos unterhalb
+
+──────────────────────────────
+GESTALTUNG
+──────────────────────────────
+- sehr linear und klar
+- kein visuelles Chaos
+- Fokus auf Ablauf
+
+──────────────────────────────
+LAYOUTREGELN
+──────────────────────────────
+- alle Boxen gleich gross
+- genügend Abstand zwischen Schritten
+- keine Überlappungen
+- Pfeile klar sichtbar
+- Texte nicht zu lang
+
+──────────────────────────────
+SPRACHE
+──────────────────────────────
+- kurze Verben („bauen“, „testen“, „deployen“)
+- praxisnah
+
+──────────────────────────────
+QUALITÄTSCHECK
+──────────────────────────────
+- Ablauf logisch korrekt
+- leicht nachvollziehbar
+- keine visuellen Fehler
+
+──────────────────────────────
+AUSGABE
+──────────────────────────────
+- vollständige SVG
+- keine zusätzliche Erklärung

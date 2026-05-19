@@ -1,0 +1,66 @@
+Erstelle eine didaktisch hochwertige SVG-Konzeptgrafik für die Berufsbildung (EFZ Applikationsentwicklung, Schweiz).
+
+──────────────────────────────
+THEMA
+──────────────────────────────
+[THEMA einsetzen, z. B. Stack vs. Heap, OOP, Datentypen]
+
+LERNZIEL
+──────────────────────────────
+Die Lernenden verstehen:
+- das zentrale Konzept
+- die wichtigsten Teilaspekte
+- typische Zusammenhänge
+
+──────────────────────────────
+INHALT
+──────────────────────────────
+- zentrale Box (Kernbegriff)
+- 3–4 Teilaspekte
+- kurze Beispiele oder Erklärungen
+- 1 Merksatz
+
+Zusammenfassung:
+- 4–6 Stichpunkte
+
+──────────────────────────────
+LAYOUT (VERPFLICHTEND)
+──────────────────────────────
+- zentrales Element oben/mittig
+- Teilbereiche darunter
+- Pfeile vom Zentrum zu Details
+- zusätzliche Erklärungen seitlich
+
+──────────────────────────────
+GESTALTUNG
+──────────────────────────────
+- klar fokussiert auf das Konzept
+- keine unnötigen Details
+- visuell leicht erfassbar
+
+──────────────────────────────
+LAYOUTREGELN
+──────────────────────────────
+- genügend Abstand zwischen allen Boxen
+- keine Überlappungen
+- Boxen gross genug für Text
+- Pfeile sauber geführt
+
+──────────────────────────────
+SPRACHE
+──────────────────────────────
+- einfach, lernendengerecht
+- kurze Sätze
+
+──────────────────────────────
+QUALITÄTSCHECK
+──────────────────────────────
+- Konzept auf einen Blick verständlich
+- klare Struktur
+- keine visuelle Unruhe
+
+──────────────────────────────
+AUSGABE
+──────────────────────────────
+- vollständige SVG
+- keine zusätzliche Erklärung

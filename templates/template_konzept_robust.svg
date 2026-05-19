@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120" role="img" aria-labelledby="title desc">
+  <title id="title">SVG-Vorlage Konzeptgrafik für Unterricht</title>
+  <desc id="desc">Robustere Konzept-Vorlage mit festen Textstartlinien, zusätzlichen Textklassen und grösseren Sicherheitsabständen.</desc>
+  <defs>
+    <style>
+      .title { font: 700 40px Arial, Helvetica, sans-serif; fill: #111; }
+      .section { font: 700 30px Arial, Helvetica, sans-serif; fill: #111; }
+      .heading { font: 700 26px Arial, Helvetica, sans-serif; fill: #111; }
+      .text { font: 700 22px Arial, Helvetica, sans-serif; fill: #111; }
+      .text-regular { font: 400 22px Arial, Helvetica, sans-serif; fill: #222; }
+      .text-tight { font: 700 20px Arial, Helvetica, sans-serif; fill: #111; }
+      .text-small { font: 400 18px Arial, Helvetica, sans-serif; fill: #222; }
+      .mono { font: 700 26px 'Courier New', Courier, monospace; }
+      .small { font: 400 18px Arial, Helvetica, sans-serif; fill: #555; }
+
+      .left-accent { fill: #4d8f3a; }
+      .right-accent { fill: #2b65b3; }
+      .hint-accent { fill: #c67f17; }
+      .muted { fill: #666; }
+
+      .panel { fill: #fbfcfb; stroke-width: 2.2; }
+      .panel-left { stroke: #6ca05f; }
+      .panel-right { stroke: #6f9ce0; }
+      .panel-neutral { stroke: #b9bcc3; }
+
+      .header-left { fill: #dfead8; stroke: #6ca05f; stroke-width: 2; }
+      .header-right { fill: #dfe8f7; stroke: #6f9ce0; stroke-width: 2; }
+      .header-neutral { fill: #f2f4f7; stroke: #b9bcc3; stroke-width: 2; }
+
+      .placeholder-box { fill: #eef2ee; stroke: #bcc8bc; stroke-width: 1.5; }
+      .viz-box { fill: #f3f5f7; stroke: #6b7078; stroke-width: 2.2; }
+      .inner-left { fill: #e6efdf; stroke: #9dbc86; stroke-width: 2; }
+      .inner-right { fill: #e8eef9; stroke: #9eb6e4; stroke-width: 2; }
+      .hint-box { fill: #f8f1e1; stroke: #d89b37; stroke-width: 2.2; }
+      .summary { fill: #f7f8fa; stroke: #b9bcc3; stroke-width: 2; }
+
+      .guide { fill: none; stroke: #c9cdd4; stroke-width: 1.5; stroke-dasharray: 8 8; }
+      .arrow-left { stroke: #6ca05f; stroke-width: 3.2; stroke-dasharray: 10 8; fill: none; }
+      .arrow-right { stroke: #2b65b3; stroke-width: 3.2; stroke-dasharray: 10 8; fill: none; }
+      .arrow-hint { stroke: #c67f17; stroke-width: 3.2; stroke-dasharray: 10 8; fill: none; }
+      .flow { stroke: #2b65b3; stroke-width: 3.2; fill: none; }
+    </style>
+
+    <marker id="arrowLeft" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6ca05f"/>
+    </marker>
+    <marker id="arrowRight" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b65b3"/>
+    </marker>
+    <marker id="arrowHint" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c67f17"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="1120" fill="#ffffff"/>
+  <text x="900" y="72" text-anchor="middle" class="title">[TITEL DER KONZEPTGRAFIK]</text>
+  <text x="900" y="104" text-anchor="middle" class="small">Konzeptdiagramm · de-CH · EFZ Applikationsentwicklung</text>
+
+  <rect x="60" y="140" rx="20" ry="20" width="1680" height="640" class="panel panel-neutral"/>
+  <rect x="80" y="158" rx="16" ry="16" width="1640" height="64" class="header-neutral"/>
+  <text x="900" y="200" text-anchor="middle" class="section">[ZENTRALES KONZEPT / SCHLÜSSELIDEE]</text>
+
+  <!-- Zentrale Box -->
+  <rect x="650" y="280" rx="24" ry="24" width="500" height="156" class="panel panel-right"/>
+  <text x="900" y="346" text-anchor="middle" class="section right-accent">[Kernbegriff]</text>
+  <text x="900" y="386" text-anchor="middle" class="text-tight">[kurze Definition / Aussage, Zeile 1]</text>
+  <text x="900" y="416" text-anchor="middle" class="text-tight">[kurze Definition / Aussage, Zeile 2]</text>
+
+  <!-- Detailboxen -->
+  <rect x="120" y="520" rx="18" ry="18" width="370" height="170" class="panel panel-left"/>
+  <text x="305" y="570" text-anchor="middle" class="heading left-accent">[Aspekt 1]</text>
+  <text x="305" y="608" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 1]</text>
+  <text x="305" y="638" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 2]</text>
+  <text x="305" y="668" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 3]</text>
+
+  <rect x="510" y="520" rx="18" ry="18" width="370" height="170" class="panel panel-left"/>
+  <text x="695" y="570" text-anchor="middle" class="heading left-accent">[Aspekt 2]</text>
+  <text x="695" y="608" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 1]</text>
+  <text x="695" y="638" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 2]</text>
+  <text x="695" y="668" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 3]</text>
+
+  <rect x="920" y="520" rx="18" ry="18" width="370" height="170" class="panel panel-right"/>
+  <text x="1105" y="570" text-anchor="middle" class="heading right-accent">[Aspekt 3]</text>
+  <text x="1105" y="608" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 1]</text>
+  <text x="1105" y="638" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 2]</text>
+  <text x="1105" y="668" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 3]</text>
+
+  <rect x="1310" y="520" rx="18" ry="18" width="370" height="170" class="panel panel-right"/>
+  <text x="1495" y="570" text-anchor="middle" class="heading right-accent">[Aspekt 4]</text>
+  <text x="1495" y="608" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 1]</text>
+  <text x="1495" y="638" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 2]</text>
+  <text x="1495" y="668" text-anchor="middle" class="text-tight">[Detail / Beispiel, Zeile 3]</text>
+
+  <line x1="790" y1="436" x2="305" y2="520" class="flow" marker-end="url(#arrowRight)"/>
+  <line x1="840" y1="436" x2="695" y2="520" class="flow" marker-end="url(#arrowRight)"/>
+  <line x1="960" y1="436" x2="1105" y2="520" class="flow" marker-end="url(#arrowRight)"/>
+  <line x1="1010" y1="436" x2="1495" y2="520" class="flow" marker-end="url(#arrowRight)"/>
+
+  <!-- Seitliche Erklärungen -->
+  <path d="M 220 460 L 290 510" class="arrow-left" marker-end="url(#arrowLeft)"/>
+  <text x="160" y="424" text-anchor="start" class="heading left-accent">[Erklärung links]</text>
+  <text x="160" y="454" text-anchor="start" class="text-tight left-accent">[optional kurze Zusatzzeile]</text>
+
+  <path d="M 1580 460 L 1510 510" class="arrow-hint" marker-end="url(#arrowHint)"/>
+  <text x="1390" y="424" text-anchor="start" class="heading hint-accent">[Hinweis rechts]</text>
+  <text x="1390" y="454" text-anchor="start" class="text-tight hint-accent">[optional kurze Zusatzzeile]</text>
+
+  <!-- Merksatz -->
+  <rect x="220" y="720" rx="18" ry="18" width="1360" height="78" class="hint-box"/>
+  <text x="900" y="766" text-anchor="middle" class="heading hint-accent">[Merksatz / Prüfungsrelevante Aussage / didaktischer Fokus]</text>
+
+  <!-- Zusammenfassung -->
+  <rect x="60" y="840" rx="20" ry="20" width="1680" height="226" class="summary"/>
+  <text x="98" y="886" class="section">Zusammenfassung</text>
+  <circle cx="112" cy="930" r="6.5" fill="#6ca05f"/>
+  <text x="132" y="938" class="text-tight">[Punkt 1: Was ist das Konzept?]</text>
+  <circle cx="112" cy="976" r="6.5" fill="#6ca05f"/>
+  <text x="132" y="984" class="text-tight">[Punkt 2: Wichtiges Teilverständnis]</text>
+  <circle cx="112" cy="1022" r="6.5" fill="#2b65b3"/>
+  <text x="132" y="1030" class="text-tight">[Punkt 3: Zusammenhang / Ursache / Wirkung]</text>
+  <circle cx="900" cy="930" r="6.5" fill="#2b65b3"/>
+  <text x="920" y="938" class="text-tight">[Punkt 4: Beispiel aus der Praxis]</text>
+  <circle cx="900" cy="976" r="6.5" fill="#c67f17"/>
+  <text x="920" y="984" class="text-tight">[Punkt 5: typischer Fehler / Missverständnis]</text>
+  <circle cx="900" cy="1022" r="6.5" fill="#c67f17"/>
+  <text x="920" y="1030" class="text-tight">[Punkt 6: Merksatz]</text>
+
+</svg>

@@ -1,0 +1,67 @@
+Erstelle eine didaktisch hochwertige SVG-Architektur-Grafik für die Berufsbildung (EFZ Applikationsentwicklung, Schweiz).
+
+──────────────────────────────
+THEMA
+──────────────────────────────
+[THEMA einsetzen, z. B. Web-App Architektur, Kubernetes Setup]
+
+LERNZIEL
+──────────────────────────────
+Die Lernenden verstehen:
+- die Hauptkomponenten
+- den Datenfluss
+- die Rollen der einzelnen Schichten
+
+──────────────────────────────
+INHALT
+──────────────────────────────
+- 3 Ebenen (z. B. Client, Backend, Daten)
+- zentrale Komponenten pro Ebene
+- Datenfluss (oben → unten)
+- seitliche Zusatzkomponenten (z. B. CI/CD, Monitoring)
+
+Zusammenfassung:
+- 3–4 Kernaussagen
+
+──────────────────────────────
+LAYOUT (VERPFLICHTEND)
+──────────────────────────────
+- vertikale Struktur (oben → unten)
+- klare Schichten
+- Zusatzkomponenten rechts
+- Pfeile für Datenfluss
+
+──────────────────────────────
+GESTALTUNG
+──────────────────────────────
+- übersichtlich, systematisch
+- klare Trennung der Ebenen
+- konsistente Farben für gleiche Rollen
+
+──────────────────────────────
+LAYOUTREGELN
+──────────────────────────────
+- grosse Boxen mit ausreichend Platz
+- keine Überlappungen
+- keine gequetschten Texte
+- alle Elemente vollständig innerhalb ihrer Box
+- Pfeile nur zwischen Boxen (nicht durch Text)
+
+──────────────────────────────
+SPRACHE
+──────────────────────────────
+- Deutsch (Schweiz)
+- kurze Labels (z. B. „Backend“, „DB“)
+
+──────────────────────────────
+QUALITÄTSCHECK
+──────────────────────────────
+- Architektur logisch verständlich
+- sauberer Fluss
+- keine visuellen Konflikte
+
+──────────────────────────────
+AUSGABE
+──────────────────────────────
+- vollständige SVG
+- keine zusätzliche Erklärung

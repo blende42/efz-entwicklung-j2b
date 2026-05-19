@@ -1,0 +1,74 @@
+Erstelle eine didaktisch hochwertige SVG-Grafik im Vergleichs-Template für die Berufsbildung (EFZ Applikationsentwicklung, Schweiz).
+
+──────────────────────────────
+THEMA
+──────────────────────────────
+[THEMA einsetzen, z. B. Primitive vs. Wrapper]
+
+LERNZIEL
+──────────────────────────────
+Die Lernenden verstehen den Unterschied zwischen:
+- [Konzept A]
+- [Konzept B]
+
+──────────────────────────────
+INHALT
+──────────────────────────────
+Linke Seite (Konzept A):
+- [Code / Beispiel]
+- [Darstellung / Struktur]
+- [2–3 Kernaussagen]
+
+Rechte Seite (Konzept B):
+- [Code / Beispiel]
+- [Darstellung / Struktur]
+- [2–3 Kernaussagen]
+
+Zusammenfassung:
+- 2 Punkte links
+- 2 Punkte rechts
+
+──────────────────────────────
+LAYOUT (VERPFLICHTEND)
+──────────────────────────────
+- 2 Spalten (links vs. rechts)
+- identische Struktur auf beiden Seiten
+- unten Zusammenfassung
+- Erklärtexte ausserhalb der Boxen mit gestrichelten Pfeilen
+
+──────────────────────────────
+GESTALTUNG
+──────────────────────────────
+- ruhig, professionell, didaktisch
+- geeignet für Beamer und A4
+- klare visuelle Trennung
+
+──────────────────────────────
+LAYOUTREGELN (SEHR WICHTIG)
+──────────────────────────────
+- alle Boxen mit genügend Innenabstand (≥ 24 px)
+- kein Text darf eine Box berühren oder überlappen
+- wenn Platz fehlt → Box vergrössern (nicht Text quetschen)
+- alle Inhalte vollständig innerhalb der Boxen
+- Pfeile dürfen nicht durch Text laufen
+- genügend Weissraum zwischen Elementen
+
+──────────────────────────────
+SPRACHE
+──────────────────────────────
+- Deutsch (Schweiz, ohne ß)
+- kurze, klare Formulierungen
+
+──────────────────────────────
+QUALITÄTSCHECK
+──────────────────────────────
+- keine Überlappungen
+- kein abgeschnittener Text
+- alles vollständig sichtbar
+- direkt im Unterricht verwendbar
+
+──────────────────────────────
+AUSGABE
+──────────────────────────────
+- vollständige SVG
+- keine zusätzliche Erklärung

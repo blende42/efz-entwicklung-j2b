@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <!--
+    Architektur-Template robust
+    Regeln:
+    - Platzhalter ersetzen, Layout nicht ändern
+    - max. 40 Zeichen pro Textzeile
+    - SVG-Text XML-konform escapen: &lt;, &gt;, &amp;
+    - de-CH: ä, ö, ü verwenden; ss statt ß
+    - nach dem Befüllen XML validieren
+  -->
+
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 32px; font-weight: 700; fill: #16324f; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .sectionTitle { font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #16324f; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #16324f; }
+      .text { font-family: Arial, sans-serif; font-size: 15px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 14px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #7a3e00; }
+      .box { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .boxSoft { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .boxGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .boxOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .boxPurple { fill: #f4efff; stroke: #8e6cc7; stroke-width: 2.5; }
+      .boxGrey { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineSoft { stroke: #7aa6d8; stroke-width: 2.5; fill: none; stroke-dasharray: 8 7; marker-end: url(#arrowSoft); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+
+    <marker id="arrowSoft" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#7aa6d8"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+
+  <!-- Titelbereich -->
+  <text x="700" y="54" text-anchor="middle" class="title">[TITEL DER ARCHITEKTURGRAFIK]</text>
+  <text x="700" y="86" text-anchor="middle" class="subtitle">[KURZE KERNAUSSAGE / ARCHITEKTURZIEL]</text>
+
+  <!-- Linke Zone: Benutzer / Client -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="160" width="270" height="150" rx="18" class="boxGreen"/>
+  </g>
+  <text x="195" y="195" text-anchor="middle" class="boxTitle">[KOMPONENTE 1]</text>
+  <text x="195" y="225" text-anchor="middle" class="text">[Beschreibung Zeile 1]</text>
+  <text x="195" y="250" text-anchor="middle" class="text">[Beschreibung Zeile 2]</text>
+  <text x="195" y="275" text-anchor="middle" class="small">[Technik / Beispiel]</text>
+
+  <!-- Mitte: Anwendung / Service -->
+  <g filter="url(#shadow)">
+    <rect x="420" y="135" width="560" height="260" rx="22" class="boxSoft"/>
+  </g>
+  <text x="700" y="175" text-anchor="middle" class="sectionTitle">[ZENTRALE ANWENDUNG / SYSTEM]</text>
+
+  <g filter="url(#shadow)">
+    <rect x="455" y="215" width="230" height="120" rx="16" class="box"/>
+  </g>
+  <text x="570" y="248" text-anchor="middle" class="boxTitle">[MODUL A]</text>
+  <text x="570" y="276" text-anchor="middle" class="text">[Aufgabe Zeile 1]</text>
+  <text x="570" y="301" text-anchor="middle" class="text">[Aufgabe Zeile 2]</text>
+
+  <g filter="url(#shadow)">
+    <rect x="715" y="215" width="230" height="120" rx="16" class="box"/>
+  </g>
+  <text x="830" y="248" text-anchor="middle" class="boxTitle">[MODUL B]</text>
+  <text x="830" y="276" text-anchor="middle" class="text">[Aufgabe Zeile 1]</text>
+  <text x="830" y="301" text-anchor="middle" class="text">[Aufgabe Zeile 2]</text>
+
+  <!-- Rechte Zone: Daten / externe Systeme -->
+  <g filter="url(#shadow)">
+    <rect x="1070" y="160" width="270" height="150" rx="18" class="boxOrange"/>
+  </g>
+  <text x="1205" y="195" text-anchor="middle" class="boxTitle">[KOMPONENTE 2]</text>
+  <text x="1205" y="225" text-anchor="middle" class="text">[Beschreibung Zeile 1]</text>
+  <text x="1205" y="250" text-anchor="middle" class="text">[Beschreibung Zeile 2]</text>
+  <text x="1205" y="275" text-anchor="middle" class="small">[Technik / Beispiel]</text>
+
+  <!-- Verbindungen oben -->
+  <path d="M330 235 C365 235, 385 235, 420 235" class="line"/>
+  <text x="375" y="218" text-anchor="middle" class="small">[Datenfluss 1]</text>
+
+  <path d="M980 235 C1015 235, 1035 235, 1070 235" class="line"/>
+  <text x="1025" y="218" text-anchor="middle" class="small">[Datenfluss 2]</text>
+
+  <!-- Infrastruktur-Bereich -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="485" width="1100" height="230" rx="24" class="boxGrey"/>
+  </g>
+  <text x="700" y="525" text-anchor="middle" class="sectionTitle">[INFRASTRUKTUR / BETRIEB]</text>
+
+  <g filter="url(#shadow)">
+    <rect x="200" y="565" width="230" height="100" rx="16" class="box"/>
+  </g>
+  <text x="315" y="595" text-anchor="middle" class="boxTitle">[BAUSTEIN 1]</text>
+  <text x="315" y="622" text-anchor="middle" class="text">[Detail Zeile 1]</text>
+  <text x="315" y="647" text-anchor="middle" class="text">[Detail Zeile 2]</text>
+
+  <g filter="url(#shadow)">
+    <rect x="470" y="565" width="230" height="100" rx="16" class="box"/>
+  </g>
+  <text x="585" y="595" text-anchor="middle" class="boxTitle">[BAUSTEIN 2]</text>
+  <text x="585" y="622" text-anchor="middle" class="text">[Detail Zeile 1]</text>
+  <text x="585" y="647" text-anchor="middle" class="text">[Detail Zeile 2]</text>
+
+  <g filter="url(#shadow)">
+    <rect x="740" y="565" width="230" height="100" rx="16" class="box"/>
+  </g>
+  <text x="855" y="595" text-anchor="middle" class="boxTitle">[BAUSTEIN 3]</text>
+  <text x="855" y="622" text-anchor="middle" class="text">[Detail Zeile 1]</text>
+  <text x="855" y="647" text-anchor="middle" class="text">[Detail Zeile 2]</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1010" y="565" width="190" height="100" rx="16" class="box"/>
+  </g>
+  <text x="1105" y="595" text-anchor="middle" class="boxTitle">[BAUSTEIN 4]</text>
+  <text x="1105" y="622" text-anchor="middle" class="text">[Detail Zeile 1]</text>
+  <text x="1105" y="647" text-anchor="middle" class="text">[Detail Zeile 2]</text>
+
+  <!-- Verbindung zur Infrastruktur -->
+  <path d="M700 395 C700 430, 700 455, 700 485" class="lineSoft"/>
+  <text x="760" y="448" text-anchor="start" class="small">[Deployment / Betrieb]</text>
+
+  <!-- Merksatz -->
+  <g filter="url(#shadow)">
+    <rect x="160" y="750" width="1080" height="62" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="700" y="789" text-anchor="middle" class="note">[MERKSATZ / ARCHITEKTURPRINZIP]</text>
+
+  <!-- Zusammenfassung -->
+  <text x="130" y="845" text-anchor="start" class="small">• [Punkt 1: Aufgabe der Architektur]</text>
+  <text x="430" y="845" text-anchor="start" class="small">• [Punkt 2: wichtigste Komponente]</text>
+  <text x="760" y="845" text-anchor="start" class="small">• [Punkt 3: zentraler Datenfluss]</text>
+  <text x="1080" y="845" text-anchor="start" class="small">• [Punkt 4: Betriebsaspekt]</text>
+</svg>
