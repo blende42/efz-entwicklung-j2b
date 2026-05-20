@@ -23,11 +23,20 @@ auf.
 
 ### 46. JSON-Strukturen und DTOs in REST-APIs
 
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_JSON_DTOs_REST.md)
+- [Übungen](Uebungen/Uebungen_JSON_DTOs_REST.md)
+- [Musterlösungen](Musterloesungen/Loesungen_JSON_DTOs_REST.md)
+- [Grafik](graphics/json_dto_rest.svg)
+
 Fokus:
 - interne Fachobjekte vs. externe API-Struktur
 - DTO-Grundidee
 - JSON-Strukturierung
 - kontrollierte REST-Ausgabe
+- manuelles Mapping
+- GET und POST mit DTOs
+- Bruno- und `curl`-Prüfung
 
 ---
 
@@ -97,6 +106,10 @@ Neue Konzepte entstehen aus:
 - Trennung von interner und externer Datenstruktur
 - wiederkehrenden Fehlerbildern
 - wachsender technischer Infrastruktur
+
+## Didaktische Referenzen
+
+- [Bewertungskriterien](docs/didaktik/bewertungskriterien.md): Standard für qualitative Rückmeldung und sichtbare Bewertungsschwerpunkte in grösseren Übungen, Projekten und Reviews ohne Punkte- oder Notenlogik
 
 ---
 

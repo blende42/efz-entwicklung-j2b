@@ -48,9 +48,27 @@ Neue Konzepte entstehen weiterhin aus konkreten Problemen:
 
 ---
 
-## Erste geplante Einheiten
+## Aktueller Stand
 
-46. JSON-Strukturen und DTOs in REST-APIs
+Die Lerneinheit 46 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_JSON_DTOs_REST.md`
+- Übungen: `Uebungen/Uebungen_JSON_DTOs_REST.md`
+- Musterlösungen: `Musterloesungen/Loesungen_JSON_DTOs_REST.md`
+- Grafik: `graphics/json_dto_rest.svg`
+
+Schwerpunkt:
+
+- interne Fachobjekte von externer API-Struktur trennen
+- DTOs problemgetrieben einführen
+- JSON-Ausgabe und JSON-Eingabe kontrollieren
+- manuelles Mapping bei GET und POST verwenden
+- Bruno und `curl` zur Prüfung der JSON-Struktur nutzen
+
+---
+
+## Nächste geplante Einheiten
+
 47. REST-Fehlerbehandlung und Statuscodes
 48. Validation bei REST-Requests
 49. Services mit Spring sauber integrieren

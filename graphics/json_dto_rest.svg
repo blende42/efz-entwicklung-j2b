@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 32px; font-weight: 700; fill: #16324f; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .sectionTitle { font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #16324f; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #16324f; }
+      .text { font-family: Arial, sans-serif; font-size: 15px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 14px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #7a3e00; }
+      .box { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .boxSoft { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .boxGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .boxOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .boxPurple { fill: #f4efff; stroke: #8e6cc7; stroke-width: 2.5; }
+      .boxGrey { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineSoft { stroke: #7aa6d8; stroke-width: 2.5; fill: none; stroke-dasharray: 8 7; marker-end: url(#arrowSoft); }
+      .lineOrange { stroke: #d9903d; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+
+    <marker id="arrowSoft" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#7aa6d8"/>
+    </marker>
+
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d9903d"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+
+  <text x="700" y="54" text-anchor="middle" class="title">JSON-Strukturen und DTOs in REST-APIs</text>
+  <text x="700" y="86" text-anchor="middle" class="subtitle">Interne Fachobjekte und öffentliche JSON-Strukturen haben unterschiedliche Verantwortlichkeiten</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="155" width="240" height="130" rx="18" class="boxGreen"/>
+  </g>
+  <text x="190" y="190" text-anchor="middle" class="boxTitle">Client</text>
+  <text x="190" y="220" text-anchor="middle" class="text">Bruno / curl</text>
+  <text x="190" y="247" text-anchor="middle" class="small">sieht HTTP und JSON</text>
+
+  <g filter="url(#shadow)">
+    <rect x="410" y="135" width="580" height="295" rx="22" class="boxSoft"/>
+  </g>
+  <text x="700" y="172" text-anchor="middle" class="sectionTitle">API-Grenze der Spring-Boot-Anwendung</text>
+
+  <g filter="url(#shadow)">
+    <rect x="455" y="215" width="220" height="120" rx="16" class="box"/>
+  </g>
+  <text x="565" y="248" text-anchor="middle" class="boxTitle">REST Controller</text>
+  <text x="565" y="276" text-anchor="middle" class="text">GET / POST</text>
+  <text x="565" y="301" text-anchor="middle" class="text">nimmt Requests an</text>
+
+  <g filter="url(#shadow)">
+    <rect x="725" y="215" width="220" height="120" rx="16" class="boxPurple"/>
+  </g>
+  <text x="835" y="248" text-anchor="middle" class="boxTitle">DTO</text>
+  <text x="835" y="276" text-anchor="middle" class="text">API-Struktur</text>
+  <text x="835" y="301" text-anchor="middle" class="text">steuert JSON</text>
+
+  <path d="M310 220 C350 220, 370 220, 410 220" class="line"/>
+  <text x="360" y="203" text-anchor="middle" class="small">HTTP / JSON</text>
+
+  <path d="M675 275 C695 275, 705 275, 725 275" class="line"/>
+  <text x="700" y="258" text-anchor="middle" class="small">DTO nutzen</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1070" y="155" width="250" height="130" rx="18" class="boxOrange"/>
+  </g>
+  <text x="1195" y="190" text-anchor="middle" class="boxTitle">Öffentliche JSON-Struktur</text>
+  <text x="1195" y="220" text-anchor="middle" class="code">{ id, name, preis }</text>
+  <text x="1195" y="247" text-anchor="middle" class="small">bewusst gestaltet</text>
+
+  <path d="M990 220 C1020 220, 1040 220, 1070 220" class="lineOrange"/>
+  <text x="1030" y="203" text-anchor="middle" class="small">Response</text>
+
+  <g filter="url(#shadow)">
+    <rect x="150" y="505" width="1100" height="210" rx="24" class="boxGrey"/>
+  </g>
+  <text x="700" y="545" text-anchor="middle" class="sectionTitle">Interne Anwendung bleibt fachlich strukturiert</text>
+
+  <g filter="url(#shadow)">
+    <rect x="205" y="585" width="210" height="95" rx="16" class="box"/>
+  </g>
+  <text x="310" y="615" text-anchor="middle" class="boxTitle">Mapping</text>
+  <text x="310" y="642" text-anchor="middle" class="text">übersetzt bewusst</text>
+  <text x="310" y="664" text-anchor="middle" class="small">DTO &lt;-&gt; Fachobjekt</text>
+
+  <g filter="url(#shadow)">
+    <rect x="475" y="585" width="210" height="95" rx="16" class="box"/>
+  </g>
+  <text x="580" y="615" text-anchor="middle" class="boxTitle">Service</text>
+  <text x="580" y="642" text-anchor="middle" class="text">Fachlogik</text>
+  <text x="580" y="664" text-anchor="middle" class="small">z. B. LagerService</text>
+
+  <g filter="url(#shadow)">
+    <rect x="745" y="585" width="210" height="95" rx="16" class="box"/>
+  </g>
+  <text x="850" y="615" text-anchor="middle" class="boxTitle">Repository</text>
+  <text x="850" y="642" text-anchor="middle" class="text">Datenzugriff</text>
+  <text x="850" y="664" text-anchor="middle" class="small">kennt keine DTOs</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1015" y="585" width="180" height="95" rx="16" class="box"/>
+  </g>
+  <text x="1105" y="615" text-anchor="middle" class="boxTitle">H2</text>
+  <text x="1105" y="642" text-anchor="middle" class="text">Datenbank</text>
+  <text x="1105" y="664" text-anchor="middle" class="small">Persistenz</text>
+
+  <path d="M835 335 C835 450, 310 490, 310 585" class="lineSoft"/>
+  <rect x="445" y="455" width="365" height="26" rx="8" fill="#f7fbff"/>
+  <text x="628" y="474" text-anchor="middle" class="small">Mapping trennt externe und interne Struktur</text>
+
+  <path d="M415 632 C440 632, 450 632, 475 632" class="line"/>
+  <path d="M685 632 C710 632, 720 632, 745 632" class="line"/>
+  <path d="M955 632 C980 632, 990 632, 1015 632" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="170" y="745" width="1060" height="70" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="700" y="776" text-anchor="middle" class="note">Interne Struktur ≠ öffentliche JSON-Struktur</text>
+  <text x="700" y="801" text-anchor="middle" class="small">DTOs machen die API-Struktur sichtbar und kontrollierbar.</text>
+
+  <text x="130" y="852" text-anchor="start" class="small">• Client sieht JSON, nicht Java</text>
+  <text x="430" y="852" text-anchor="start" class="small">• Controller arbeitet an der API-Grenze</text>
+  <text x="785" y="852" text-anchor="start" class="small">• Service bleibt für Fachlogik zuständig</text>
+  <text x="1105" y="852" text-anchor="start" class="small">• Repository kennt keine DTOs</text>
+</svg>

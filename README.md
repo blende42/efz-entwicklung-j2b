@@ -58,13 +58,31 @@ Vorausgesetzt werden:
 
 # Geplante Themenblöcke
 
-- JSON-Strukturen und DTOs
 - REST-Fehlerbehandlung
 - Validation bei REST-Requests
 - Dependency Injection
 - Spring-Konfiguration
 - Vorbereitung auf JPA/Spring Data
 - Integrationstests
+
+---
+
+# Lerneinheiten
+
+## 46. JSON-Strukturen und DTOs in REST-APIs
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_JSON_DTOs_REST.md)
+- [Übungen](Uebungen/Uebungen_JSON_DTOs_REST.md)
+- [Musterlösungen](Musterloesungen/Loesungen_JSON_DTOs_REST.md)
+- [Grafik](graphics/json_dto_rest.svg)
+
+Fokus:
+- interne Fachobjekte von externer API-Struktur trennen
+- DTOs problemgetrieben einführen
+- JSON-Ausgabe und JSON-Eingabe bewusst gestalten
+- manuelles Mapping in einfachen Spring-Boot-REST-Endpunkten verwenden
+- Bruno und `curl` zur Prüfung der JSON-Struktur einsetzen
 
 ---
 
@@ -109,7 +127,8 @@ Zusätzliche didaktische Dokumentation.
 
 ### docs/didaktik/
 
-Didaktische Leitideen und Entwicklungslogik.
+Didaktische Leitideen, Entwicklungslogik und qualitative Bewertungskriterien:
+- [Bewertungskriterien](docs/didaktik/bewertungskriterien.md)
 
 ### docs/prozesse/
 
@@ -158,3 +177,4 @@ bleiben.
 - saubere Verantwortlichkeiten
 - verständnisorientierte Architekturentwicklung
 - reproduzierbare Entwicklungsworkflows
+- qualitative Bewertungsschwerpunkte für grössere Übungen, Projekte und Reviews

@@ -14,7 +14,7 @@ Dieses Repository dient zur Erstellung und Pflege von Lehrinhalten für die Ausb
 
 ## MUSS
 - Verwende Deutsch mit Locale `de_CH`.
-- Verwende Schweizer Hochdeutsch mit `ss` statt `ß`.
+- Verwende Schweizer Hochdeutsch mit `ss` statt Eszett.
 - Verwende in normalen Texten und SVG-Beschriftungen `ä`, `ö` und `ü` korrekt.
 - Verwende für Build-, Test- und Run-Aufgaben bevorzugt `mvn`.
 - Verwende `javac` nur zum Kompilieren bzw. Builden von Java-Code.
@@ -44,6 +44,7 @@ Dieses Repository dient zur Erstellung und Pflege von Lehrinhalten für die Ausb
 - Führe neue Konzepte möglichst einzeln ein.
 - Trenne Theorie, Auftrag, Beispiel, Testfälle, Zusatzaufgaben und Reflexion klar sichtbar.
 - Verwende bei Übungen nach Möglichkeit eine Staffelung wie Basis, Aufbau, Vertiefung und Transfer.
+- Grössere Übungen, Projekte und Reviews sollen einen sichtbaren Bewertungsfokus mit den Standardbereichen aus `docs/didaktik/bewertungskriterien.md` enthalten; die Bewertung bleibt qualitativ, lernzielorientiert und EFZ-gerecht.
 - Gib bei Bedarf konkrete Inputs, Testfälle oder erwartete Resultate an.
 - Ergänze bei Musterlösungen kurze Hinweise zu Vorteil, Nachteil oder typischem Fehler, wenn das didaktisch hilft.
 - Verwende Grafiken, wenn Vergleiche, Beziehungen, Abläufe oder Architekturen dadurch klarer verständlich werden.
@@ -60,6 +61,8 @@ Dieses Repository dient zur Erstellung und Pflege von Lehrinhalten für die Ausb
 - Keine Platzhalter, kaputten Referenzen, halbfertigen Abschnitte oder unvalidierten SVGs zurücklassen.
 - Keine bestehenden Strukturen nur aus Geschmacksgründen umbauen.
 - Keine Lösungen liefern, die zwar raffiniert, aber für Lernende unnötig schwer nachvollziehbar sind.
+- Keine unnötig komplizierten Bewertungsraster einführen.
+- Keine Noten- oder Punktelogik einführen, ausser dies wird ausdrücklich verlangt.
 
 ## Qualitätsgates
 
@@ -81,6 +84,12 @@ Dieses Repository dient zur Erstellung und Pflege von Lehrinhalten für die Ausb
 - Schwierigkeit ist nachvollziehbar gestaffelt oder bewusst einheitlich.
 - Inputs, Testfälle oder erwartete Resultate sind vorhanden, wenn sie zum Lernziel beitragen.
 - Kein unvorbereitetes Vorwissen wird stillschweigend vorausgesetzt.
+- Bewertungsfokus ist vorhanden, wenn die Übung umfangreich genug ist.
+- Kriterien sind für Lernende verständlich und beziehen sich auf das Lernziel.
+
+### Projekte
+- Projekte enthalten klare Bewertungsschwerpunkte oder Review-Kriterien.
+- Bewertungsschwerpunkte bleiben qualitativ, praxisnah und lernzielorientiert.
 
 ### Musterlösungen
 - Lösung ist fachlich korrekt.
