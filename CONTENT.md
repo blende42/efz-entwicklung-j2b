@@ -58,7 +58,25 @@ Fokus:
 
 ---
 
-### 48. REST-Fehlerbehandlung und Statuscodes
+### 48. Streams und Transformationen in REST- und DTO-Anwendungen
+
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Streams_Transformationen_REST.md)
+- [Übungen](Uebungen/Uebungen_Streams_Transformationen_REST.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Streams_Transformationen_REST.md)
+- [Grafik](graphics/streams_transformationen_rest.svg)
+
+Fokus:
+- Stream API im REST-/DTO-Kontext
+- `stream()`, `map()`, `filter()` und `toList()`
+- DTO-Transformationen
+- REST-Listen
+- einfache Lambda-Ausdrücke
+- Vergleich mit klassischer Iteration
+
+---
+
+### 49. REST-Fehlerbehandlung und Statuscodes
 
 Fokus:
 - Fehlerbehandlung
@@ -68,7 +86,7 @@ Fokus:
 
 ---
 
-### 49. Validation bei REST-Requests
+### 50. Validation bei REST-Requests
 
 Fokus:
 - Eingabevalidierung
@@ -78,7 +96,7 @@ Fokus:
 
 ---
 
-### 50. Services mit Spring sauber integrieren
+### 51. Services mit Spring sauber integrieren
 
 Fokus:
 - Dependency Injection
@@ -88,7 +106,7 @@ Fokus:
 
 ---
 
-### 51. Vorbereitung auf JPA und Spring Data
+### 52. Vorbereitung auf JPA und Spring Data
 
 Fokus:
 - Persistenzabstraktion

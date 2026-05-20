@@ -103,6 +103,23 @@ Fokus:
 
 ---
 
+## 48. Streams und Transformationen in REST- und DTO-Anwendungen
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Streams_Transformationen_REST.md)
+- [Übungen](Uebungen/Uebungen_Streams_Transformationen_REST.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Streams_Transformationen_REST.md)
+- [Grafik](graphics/streams_transformationen_rest.svg)
+
+Fokus:
+- Streams als kontrollierte Verarbeitung von Collections verstehen
+- DTO-Mapping mit `map()` ausdrücken
+- einfache Filter mit `filter()` einsetzen
+- Stream-Ergebnisse mit `toList()` wieder als REST-Liste zurückgeben
+- klassische Schleifen und Stream-Transformationen vergleichen
+
+---
+
 # Repository-Struktur
 
 ## Arbeitsblaetter/

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Streams und Transformationen in REST- und DTO-Anwendungen</title>
+  <desc id="desc">Die Grafik vergleicht klassische Schleife und Stream-Transformation beim DTO-Mapping für REST-Listen.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #16324f; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .sectionTitle { font-family: Arial, sans-serif; font-size: 21px; font-weight: 700; fill: #16324f; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #16324f; }
+      .text { font-family: Arial, sans-serif; font-size: 15px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 15px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #7a3e00; }
+      .panel { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelSoft { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .panelOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .panelPurple { fill: #f4efff; stroke: #8e6cc7; stroke-width: 2.5; }
+      .panelGrey { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineSoft { stroke: #7aa6d8; stroke-width: 2.5; fill: none; stroke-dasharray: 8 7; marker-end: url(#arrowSoft); }
+      .lineOrange { stroke: #d9903d; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+
+    <marker id="arrowSoft" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#7aa6d8"/>
+    </marker>
+
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d9903d"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="960"/>
+
+  <text x="800" y="54" text-anchor="middle" class="title">Streams und Transformationen in REST- und DTO-Anwendungen</text>
+  <text x="800" y="86" text-anchor="middle" class="subtitle">Aus Fachobjekten werden kontrollierte DTO-Listen für REST-Ausgaben</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="140" width="1460" height="330" rx="24" class="panelSoft"/>
+  </g>
+  <text x="800" y="180" text-anchor="middle" class="sectionTitle">Stream-Transformation</text>
+
+  <g filter="url(#shadow)">
+    <rect x="115" y="250" width="190" height="100" rx="16" class="panelGreen"/>
+  </g>
+  <text x="210" y="286" text-anchor="middle" class="boxTitle">List&lt;Produkt&gt;</text>
+  <text x="210" y="315" text-anchor="middle" class="small">Fachobjekte</text>
+
+  <g filter="url(#shadow)">
+    <rect x="365" y="250" width="190" height="100" rx="16" class="panel"/>
+  </g>
+  <text x="460" y="286" text-anchor="middle" class="code">stream()</text>
+  <text x="460" y="315" text-anchor="middle" class="small">Verarbeitung starten</text>
+
+  <g filter="url(#shadow)">
+    <rect x="615" y="250" width="190" height="100" rx="16" class="panelOrange"/>
+  </g>
+  <text x="710" y="286" text-anchor="middle" class="code">filter()</text>
+  <text x="710" y="315" text-anchor="middle" class="small">auswählen</text>
+
+  <g filter="url(#shadow)">
+    <rect x="865" y="250" width="190" height="100" rx="16" class="panelPurple"/>
+  </g>
+  <text x="960" y="286" text-anchor="middle" class="code">map()</text>
+  <text x="960" y="315" text-anchor="middle" class="small">Produkt -&gt; DTO</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1115" y="250" width="190" height="100" rx="16" class="panel"/>
+  </g>
+  <text x="1210" y="286" text-anchor="middle" class="code">toList()</text>
+  <text x="1210" y="315" text-anchor="middle" class="small">Ergebnis sammeln</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1365" y="250" width="125" height="100" rx="16" class="panelGreen"/>
+  </g>
+  <text x="1428" y="286" text-anchor="middle" class="boxTitle">JSON</text>
+  <text x="1428" y="315" text-anchor="middle" class="small">REST-Ausgabe</text>
+
+  <path d="M305 300 C325 300, 345 300, 365 300" class="line"/>
+  <path d="M555 300 C575 300, 595 300, 615 300" class="line"/>
+  <path d="M805 300 C825 300, 845 300, 865 300" class="line"/>
+  <path d="M1055 300 C1075 300, 1095 300, 1115 300" class="line"/>
+  <path d="M1305 300 C1325 300, 1345 300, 1365 300" class="line"/>
+
+  <text x="800" y="410" text-anchor="middle" class="code">produkte.stream().filter(...).map(produkt -&gt; toResponseDto(produkt)).toList()</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="535" width="650" height="245" rx="22" class="panelGrey"/>
+  </g>
+  <text x="415" y="575" text-anchor="middle" class="sectionTitle">Klassische Schleife</text>
+  <text x="135" y="625" class="code">List&lt;ProduktResponseDto&gt; response = new ArrayList&lt;&gt;();</text>
+  <text x="135" y="660" class="code">for (Produkt produkt : produkte) {</text>
+  <text x="175" y="695" class="code">response.add(toResponseDto(produkt));</text>
+  <text x="135" y="730" class="code">}</text>
+  <text x="135" y="765" class="code">return response;</text>
+
+  <g filter="url(#shadow)">
+    <rect x="860" y="535" width="650" height="245" rx="22" class="panelGrey"/>
+  </g>
+  <text x="1185" y="575" text-anchor="middle" class="sectionTitle">Stream-Transformation</text>
+  <text x="905" y="625" class="code">return produkte.stream()</text>
+  <text x="945" y="660" class="code">.filter(produkt -&gt; produkt.getPreis() &gt; 0)</text>
+  <text x="945" y="695" class="code">.map(produkt -&gt; toResponseDto(produkt))</text>
+  <text x="945" y="730" class="code">.toList();</text>
+
+  <path d="M740 657 C785 657, 815 657, 860 657" class="lineOrange"/>
+  <text x="800" y="610" text-anchor="middle" class="small">gleiche Idee</text>
+
+  <g filter="url(#shadow)">
+    <rect x="130" y="835" width="1340" height="70" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="800" y="865" text-anchor="middle" class="note">Collections speichern Daten; Streams verarbeiten Daten.</text>
+  <text x="800" y="890" text-anchor="middle" class="small">Für REST entsteht am Ende wieder eine DTO-Liste, die als JSON-Liste ausgegeben wird.</text>
+</svg>

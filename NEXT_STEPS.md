@@ -80,14 +80,29 @@ Schwerpunkt:
 - `ArrayList`, `HashSet` und `HashMap` passend einsetzen
 - bewusst noch keine Streams verwenden
 
+Die Lerneinheit 48 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_Streams_Transformationen_REST.md`
+- Übungen: `Uebungen/Uebungen_Streams_Transformationen_REST.md`
+- Musterlösungen: `Musterloesungen/Loesungen_Streams_Transformationen_REST.md`
+- Grafik: `graphics/streams_transformationen_rest.svg`
+
+Schwerpunkt:
+
+- Streams als kontrollierte Verarbeitung von Collections verstehen
+- DTO-Mapping mit `map()` ausdrücken
+- einfache Filter mit `filter()` einsetzen
+- Stream-Ergebnisse mit `toList()` wieder als REST-Liste zurückgeben
+- klassische Schleifen und Stream-Transformationen vergleichen
+
 ---
 
 ## Nächste geplante Einheiten
 
-48. REST-Fehlerbehandlung und Statuscodes
-49. Validation bei REST-Requests
-50. Services mit Spring sauber integrieren
-51. Vorbereitung auf JPA und Spring Data
+49. REST-Fehlerbehandlung und Statuscodes
+50. Validation bei REST-Requests
+51. Services mit Spring sauber integrieren
+52. Vorbereitung auf JPA und Spring Data
 
 ---
 
