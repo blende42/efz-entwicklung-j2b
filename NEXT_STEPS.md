@@ -65,14 +65,29 @@ Schwerpunkt:
 - manuelles Mapping bei GET und POST verwenden
 - Bruno und `curl` zur Prüfung der JSON-Struktur nutzen
 
+Die Lerneinheit 47 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_Collections_Framework_REST.md`
+- Übungen: `Uebungen/Uebungen_Collections_Framework_REST.md`
+- Musterlösungen: `Musterloesungen/Loesungen_Collections_Framework_REST.md`
+- Grafik: `graphics/collections_framework_rest.svg`
+
+Schwerpunkt:
+
+- Collections in REST- und DTO-Anwendungen verstehen
+- `List`, `Set` und `Map` unterscheiden
+- DTO-Listen mit klassischer Iteration aufbauen
+- `ArrayList`, `HashSet` und `HashMap` passend einsetzen
+- bewusst noch keine Streams verwenden
+
 ---
 
 ## Nächste geplante Einheiten
 
-47. REST-Fehlerbehandlung und Statuscodes
-48. Validation bei REST-Requests
-49. Services mit Spring sauber integrieren
-50. Vorbereitung auf JPA und Spring Data
+48. REST-Fehlerbehandlung und Statuscodes
+49. Validation bei REST-Requests
+50. Services mit Spring sauber integrieren
+51. Vorbereitung auf JPA und Spring Data
 
 ---
 

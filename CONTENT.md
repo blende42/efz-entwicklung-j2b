@@ -40,7 +40,25 @@ Fokus:
 
 ---
 
-### 47. REST-Fehlerbehandlung und Statuscodes
+### 47. Collections Framework in REST- und DTO-Anwendungen
+
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Collections_Framework_REST.md)
+- [Übungen](Uebungen/Uebungen_Collections_Framework_REST.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Collections_Framework_REST.md)
+- [Grafik](graphics/collections_framework_rest.svg)
+
+Fokus:
+- `List`, `ArrayList`, `Set`, `HashSet`, `Map` und `HashMap`
+- DTO-Listen
+- REST-Ausgabe mit mehreren Objekten
+- klassische Iteration
+- bewusste Collection-Auswahl
+- Vorbereitung auf Streams ohne Streams
+
+---
+
+### 48. REST-Fehlerbehandlung und Statuscodes
 
 Fokus:
 - Fehlerbehandlung
@@ -50,7 +68,7 @@ Fokus:
 
 ---
 
-### 48. Validation bei REST-Requests
+### 49. Validation bei REST-Requests
 
 Fokus:
 - Eingabevalidierung
@@ -60,7 +78,7 @@ Fokus:
 
 ---
 
-### 49. Services mit Spring sauber integrieren
+### 50. Services mit Spring sauber integrieren
 
 Fokus:
 - Dependency Injection
@@ -70,7 +88,7 @@ Fokus:
 
 ---
 
-### 50. Vorbereitung auf JPA und Spring Data
+### 51. Vorbereitung auf JPA und Spring Data
 
 Fokus:
 - Persistenzabstraktion

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 32px; font-weight: 700; fill: #16324f; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .sectionTitle { font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #16324f; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #16324f; }
+      .text { font-family: Arial, sans-serif; font-size: 15px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 14px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #7a3e00; }
+      .box { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .boxSoft { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .boxGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .boxOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .boxPurple { fill: #f4efff; stroke: #8e6cc7; stroke-width: 2.5; }
+      .boxGrey { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineSoft { stroke: #7aa6d8; stroke-width: 2.5; fill: none; stroke-dasharray: 8 7; marker-end: url(#arrowSoft); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+
+    <marker id="arrowSoft" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#7aa6d8"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="900"/>
+
+  <text x="700" y="54" text-anchor="middle" class="title">Collections Framework in REST- und DTO-Anwendungen</text>
+  <text x="700" y="86" text-anchor="middle" class="subtitle">Collections organisieren mehrere Objekte im Java-Code</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="145" width="240" height="130" rx="18" class="boxGreen"/>
+  </g>
+  <text x="190" y="180" text-anchor="middle" class="boxTitle">REST Controller</text>
+  <text x="190" y="210" text-anchor="middle" class="text">GET /produkte</text>
+  <text x="190" y="237" text-anchor="middle" class="small">liefert mehrere DTOs</text>
+
+  <g filter="url(#shadow)">
+    <rect x="405" y="130" width="590" height="310" rx="22" class="boxSoft"/>
+  </g>
+  <text x="700" y="168" text-anchor="middle" class="sectionTitle">DTO-Liste für die REST-Ausgabe</text>
+
+  <g filter="url(#shadow)">
+    <rect x="430" y="215" width="220" height="130" rx="16" class="box"/>
+  </g>
+  <text x="540" y="248" text-anchor="middle" class="boxTitle">List&lt;Produkt&gt;</text>
+  <text x="540" y="276" text-anchor="middle" class="text">interne Fachobjekte</text>
+  <text x="540" y="303" text-anchor="middle" class="small">aus Service / Repository</text>
+
+  <g filter="url(#shadow)">
+    <rect x="770" y="215" width="220" height="130" rx="16" class="boxPurple"/>
+  </g>
+  <text x="880" y="248" text-anchor="middle" class="boxTitle">List&lt;ProduktDto&gt;</text>
+  <text x="880" y="276" text-anchor="middle" class="text">öffentliche DTOs</text>
+  <text x="880" y="303" text-anchor="middle" class="small">für JSON-Liste</text>
+
+  <path d="M310 210 C350 210, 370 210, 405 210" class="line"/>
+  <text x="360" y="193" text-anchor="middle" class="small">Aufruf</text>
+
+  <path d="M650 280 C690 280, 730 280, 770 280" class="line"/>
+  <text x="710" y="203" text-anchor="middle" class="small">for-each + Mapping</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1080" y="145" width="250" height="130" rx="18" class="boxOrange"/>
+  </g>
+  <text x="1205" y="180" text-anchor="middle" class="boxTitle">JSON-Liste</text>
+  <text x="1205" y="210" text-anchor="middle" class="code">[ { ... }, { ... } ]</text>
+  <text x="1205" y="237" text-anchor="middle" class="small">sichtbar für Clients</text>
+
+  <path d="M995 210 C1025 210, 1050 210, 1080 210" class="line"/>
+  <text x="1038" y="193" text-anchor="middle" class="small">Response</text>
+
+  <g filter="url(#shadow)">
+    <rect x="150" y="505" width="1100" height="210" rx="24" class="boxGrey"/>
+  </g>
+  <text x="700" y="545" text-anchor="middle" class="sectionTitle">Collection-Typ passend zur Aufgabe wählen</text>
+
+  <g filter="url(#shadow)">
+    <rect x="205" y="585" width="260" height="95" rx="16" class="box"/>
+  </g>
+  <text x="335" y="615" text-anchor="middle" class="boxTitle">List</text>
+  <text x="335" y="642" text-anchor="middle" class="text">Reihenfolge</text>
+  <text x="335" y="664" text-anchor="middle" class="small">Duplikate möglich</text>
+
+  <g filter="url(#shadow)">
+    <rect x="570" y="585" width="260" height="95" rx="16" class="box"/>
+  </g>
+  <text x="700" y="615" text-anchor="middle" class="boxTitle">Set</text>
+  <text x="700" y="642" text-anchor="middle" class="text">eindeutige Werte</text>
+  <text x="700" y="664" text-anchor="middle" class="small">z. B. Kategorien</text>
+
+  <g filter="url(#shadow)">
+    <rect x="935" y="585" width="260" height="95" rx="16" class="box"/>
+  </g>
+  <text x="1065" y="615" text-anchor="middle" class="boxTitle">Map</text>
+  <text x="1065" y="642" text-anchor="middle" class="text">Schlüssel -&gt; Wert</text>
+  <text x="1065" y="664" text-anchor="middle" class="small">z. B. ID -&gt; DTO</text>
+
+  <path d="M700 440 C700 465, 700 485, 700 505" class="lineSoft"/>
+  <text x="735" y="476" text-anchor="start" class="small">mehrere Datensätze organisieren</text>
+
+  <g filter="url(#shadow)">
+    <rect x="170" y="745" width="1060" height="70" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="700" y="776" text-anchor="middle" class="note">Die Collection wird passend zur Aufgabe gewählt.</text>
+  <text x="700" y="801" text-anchor="middle" class="small">REST-Ausgaben sind oft Listen; Sets und Maps helfen bei interner Organisation.</text>
+
+  <text x="135" y="852" text-anchor="start" class="small">• keine Streams in dieser Einheit</text>
+  <text x="455" y="852" text-anchor="start" class="small">• List für DTO-Ausgaben</text>
+  <text x="735" y="852" text-anchor="start" class="small">• Set für Eindeutigkeit</text>
+  <text x="1010" y="852" text-anchor="start" class="small">• Map für Zuordnungen</text>
+</svg>

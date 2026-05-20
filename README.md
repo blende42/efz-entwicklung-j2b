@@ -86,6 +86,23 @@ Fokus:
 
 ---
 
+## 47. Collections Framework in REST- und DTO-Anwendungen
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Collections_Framework_REST.md)
+- [Übungen](Uebungen/Uebungen_Collections_Framework_REST.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Collections_Framework_REST.md)
+- [Grafik](graphics/collections_framework_rest.svg)
+
+Fokus:
+- `List`, `Set` und `Map` im REST-/DTO-Kontext unterscheiden
+- DTO-Listen mit klassischer Iteration aufbauen
+- `ArrayList`, `HashSet` und `HashMap` passend einsetzen
+- REST-Ausgaben mit mehreren Objekten bewusst einordnen
+- auf spätere Streams vorbereiten, ohne Streams einzuführen
+
+---
+
 # Repository-Struktur
 
 ## Arbeitsblaetter/
