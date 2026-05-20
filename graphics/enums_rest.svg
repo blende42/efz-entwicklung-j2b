@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Enums in Fachmodellen und REST-APIs</title>
+  <desc id="desc">Die Grafik zeigt, wie REST-JSON, DTO, Fachmodell und ProduktStatus zusammenhängen und wie Enums beliebige String-Werte ersetzen.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #16324f; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .sectionTitle { font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #16324f; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #16324f; }
+      .text { font-family: Arial, sans-serif; font-size: 15px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 15px; fill: #17324d; }
+      .codeSmall { font-family: Courier New, monospace; font-size: 13px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #7a3e00; }
+      .panel { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelSoft { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .panelOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .panelRed { fill: #fff0f0; stroke: #c95454; stroke-width: 2.5; }
+      .panelGrey { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineGreen { stroke: #6aa84f; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .lineOrange { stroke: #d9903d; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6aa84f"/>
+    </marker>
+
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d9903d"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="960"/>
+
+  <text x="800" y="54" text-anchor="middle" class="title">Enums in Fachmodellen und REST-APIs</text>
+  <text x="800" y="86" text-anchor="middle" class="subtitle">Kontrollierte Zustände statt beliebiger Status-Strings</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="135" width="410" height="565" rx="20" class="panelRed"/>
+  </g>
+  <text x="285" y="177" text-anchor="middle" class="sectionTitle">String-Problem</text>
+  <text x="125" y="235" class="boxTitle">beliebige Werte</text>
+  <text x="125" y="280" class="code">"AKTIV"</text>
+  <text x="125" y="320" class="code">"aktiv"</text>
+  <text x="125" y="360" class="code">"ACTIVE"</text>
+  <text x="125" y="400" class="code">"Aktiv"</text>
+  <text x="125" y="455" class="text">Problem:</text>
+  <text x="145" y="488" class="small">Tippfehler bleiben möglich.</text>
+  <text x="145" y="520" class="small">Schreibweisen werden uneinheitlich.</text>
+  <text x="145" y="552" class="small">Der erlaubte Wertebereich ist unklar.</text>
+  <text x="145" y="584" class="small">REST-Werte wachsen unkontrolliert.</text>
+  <text x="285" y="645" text-anchor="middle" class="note">String = beliebiger Text</text>
+
+  <g filter="url(#shadow)">
+    <rect x="585" y="135" width="430" height="675" rx="20" class="panelSoft"/>
+  </g>
+  <text x="800" y="177" text-anchor="middle" class="sectionTitle">REST- und Fachmodell-Kette</text>
+
+  <g filter="url(#shadow)">
+    <rect x="645" y="220" width="310" height="95" rx="16" class="panel"/>
+  </g>
+  <text x="800" y="252" text-anchor="middle" class="boxTitle">REST-JSON</text>
+  <text x="800" y="286" text-anchor="middle" class="codeSmall">"status": "AKTIV"</text>
+
+  <g filter="url(#shadow)">
+    <rect x="645" y="380" width="310" height="95" rx="16" class="panel"/>
+  </g>
+  <text x="800" y="412" text-anchor="middle" class="boxTitle">DTO mit Enum</text>
+  <text x="800" y="446" text-anchor="middle" class="codeSmall">ProduktStatus status</text>
+
+  <g filter="url(#shadow)">
+    <rect x="645" y="540" width="310" height="95" rx="16" class="panel"/>
+  </g>
+  <text x="800" y="572" text-anchor="middle" class="boxTitle">Fachmodell</text>
+  <text x="800" y="606" text-anchor="middle" class="codeSmall">Produkt.status</text>
+
+  <g filter="url(#shadow)">
+    <rect x="645" y="700" width="310" height="80" rx="16" class="panelGreen"/>
+  </g>
+  <text x="800" y="732" text-anchor="middle" class="boxTitle">ProduktStatus</text>
+  <text x="800" y="760" text-anchor="middle" class="codeSmall">AKTIV | INAKTIV | NICHT_LIEFERBAR</text>
+
+  <path d="M800 315 C800 335, 800 360, 800 380" class="line"/>
+  <path d="M800 475 C800 495, 800 520, 800 540" class="line"/>
+  <path d="M800 635 C800 655, 800 680, 800 700" class="lineGreen"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1110" y="135" width="410" height="565" rx="20" class="panelGreen"/>
+  </g>
+  <text x="1315" y="177" text-anchor="middle" class="sectionTitle">Enum-Lösung</text>
+  <text x="1155" y="235" class="boxTitle">kontrollierte Zustände</text>
+  <text x="1155" y="285" class="code">public enum ProduktStatus {</text>
+  <text x="1195" y="325" class="code">AKTIV,</text>
+  <text x="1195" y="365" class="code">INAKTIV,</text>
+  <text x="1195" y="405" class="code">NICHT_LIEFERBAR</text>
+  <text x="1155" y="445" class="code">}</text>
+  <text x="1155" y="505" class="text">Wirkung:</text>
+  <text x="1175" y="538" class="small">Erlaubte Werte stehen an einer Stelle.</text>
+  <text x="1175" y="570" class="small">Statuslogik wird lesbarer.</text>
+  <text x="1175" y="602" class="small">DTO und JSON bleiben stabiler.</text>
+  <text x="1315" y="645" text-anchor="middle" class="note">Enum = fester Wertebereich</text>
+
+  <path d="M490 418 C525 418, 550 418, 585 418" class="lineOrange"/>
+  <path d="M1015 418 C1050 418, 1075 418, 1110 418" class="lineGreen"/>
+
+  <g filter="url(#shadow)">
+    <rect x="160" y="835" width="1280" height="70" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="800" y="865" text-anchor="middle" class="note">REST- und Fachmodelle benötigen kontrollierte und klar definierte Zustände.</text>
+  <text x="800" y="890" text-anchor="middle" class="small">Enums vermeiden magische Strings und machen Statuswerte im Code stabiler nachvollziehbar.</text>
+</svg>

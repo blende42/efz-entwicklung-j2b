@@ -76,7 +76,25 @@ Fokus:
 
 ---
 
-### 49. REST-Fehlerbehandlung und Statuscodes
+### 49. Enums in Fachmodellen und REST-APIs
+
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Enums_REST.md)
+- [Übungen](Uebungen/Uebungen_Enums_REST.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Enums_REST.md)
+- [Grafik](graphics/enums_rest.svg)
+
+Fokus:
+- magische Strings vermeiden
+- kontrollierte Wertebereiche mit `enum`
+- `ProduktStatus` im Fachmodell
+- Enums in DTOs und REST-JSON
+- `switch` und Stream-Filter mit Enum-Werten
+- stabile Statuswerte für REST-Clients
+
+---
+
+### 50. REST-Fehlerbehandlung und Statuscodes
 
 Fokus:
 - Fehlerbehandlung
@@ -86,7 +104,7 @@ Fokus:
 
 ---
 
-### 50. Validation bei REST-Requests
+### 51. Validation bei REST-Requests
 
 Fokus:
 - Eingabevalidierung
@@ -96,7 +114,7 @@ Fokus:
 
 ---
 
-### 51. Services mit Spring sauber integrieren
+### 52. Services mit Spring sauber integrieren
 
 Fokus:
 - Dependency Injection
@@ -106,7 +124,7 @@ Fokus:
 
 ---
 
-### 52. Vorbereitung auf JPA und Spring Data
+### 53. Vorbereitung auf JPA und Spring Data
 
 Fokus:
 - Persistenzabstraktion
@@ -118,14 +136,24 @@ Fokus:
 
 # Projekte
 
-## REST-Lagerverwaltung erweitern
+## REST-Lagerverwaltung professionell erweitern
 
-Geplante Vertiefungen:
+Material:
+- [Projektübersicht](Projekte/REST_Lagerverwaltung_Erweitern/README.md)
+- [Projektauftrag für Lernende](Projekte/REST_Lagerverwaltung_Erweitern/Lernende/Projektauftrag_REST_Lagerverwaltung_Erweitern.md)
+- [Projektauftrag für Lehrpersonen](Projekte/REST_Lagerverwaltung_Erweitern/Lehrperson/Projektauftrag_REST_Lagerverwaltung_Erweitern_LP.md)
+- [Musterlösung](Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung/README.md)
+- [Projektreview](Projekte/REST_Lagerverwaltung_Erweitern/Review/Projektreview_REST_Lagerverwaltung_Erweitern.md)
+- [Reflexion](Projekte/REST_Lagerverwaltung_Erweitern/Review/Reflexion_REST_Lagerverwaltung_Erweitern.md)
+
+Fokus:
 - DTOs
-- Validation
-- Fehlerbehandlung
-- strukturierte REST-API
-- API-Workflows
+- Collections
+- Streams
+- Enums mit `ProduktStatus`
+- strukturierte REST-API ohne JPA, Security und Validation
+- Bruno-Workflows
+- vollständige Spring-Boot-Musterlösung als Referenzstand
 
 ---
 

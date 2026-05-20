@@ -120,6 +120,23 @@ Fokus:
 
 ---
 
+## 49. Enums in Fachmodellen und REST-APIs
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Enums_REST.md)
+- [Übungen](Uebungen/Uebungen_Enums_REST.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Enums_REST.md)
+- [Grafik](graphics/enums_rest.svg)
+
+Fokus:
+- kontrollierte Zustände statt magischer Strings verstehen
+- `ProduktStatus` als einfachen Enum-Wertebereich einsetzen
+- Enums im Fachmodell und in DTOs verwenden
+- REST-/JSON-Darstellung von Enum-Werten einordnen
+- `switch` und Streams mit Enum-Werten in kleinen Beispielen nutzen
+
+---
+
 # Repository-Struktur
 
 ## Arbeitsblaetter/
@@ -146,6 +163,23 @@ Kompakte Musterlösungen und Lösungsansätze.
 ## Projekte/
 
 Grössere zusammenhängende Projektarbeiten.
+
+### REST-Lagerverwaltung professionell erweitern
+
+Erstellt:
+- [Projektübersicht](Projekte/REST_Lagerverwaltung_Erweitern/README.md)
+- [Projektauftrag für Lernende](Projekte/REST_Lagerverwaltung_Erweitern/Lernende/Projektauftrag_REST_Lagerverwaltung_Erweitern.md)
+- [Projektauftrag für Lehrpersonen](Projekte/REST_Lagerverwaltung_Erweitern/Lehrperson/Projektauftrag_REST_Lagerverwaltung_Erweitern_LP.md)
+- [Musterlösung](Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung/README.md)
+- [Projektreview](Projekte/REST_Lagerverwaltung_Erweitern/Review/Projektreview_REST_Lagerverwaltung_Erweitern.md)
+- [Reflexion](Projekte/REST_Lagerverwaltung_Erweitern/Review/Reflexion_REST_Lagerverwaltung_Erweitern.md)
+
+Fokus:
+- DTOs, Collections, Streams und Enums in einer kleinen REST-Lagerverwaltung kombinieren
+- `ProduktStatus` als kontrollierten Zustand einsetzen
+- Controller, Service und Repository sauber trennen
+- Bruno-Workflows für API-Prüfungen verwenden
+- vollständige lauffähige Spring-Boot-Musterlösung als Referenzstand bereitstellen
 
 ---
 

@@ -95,14 +95,47 @@ Schwerpunkt:
 - Stream-Ergebnisse mit `toList()` wieder als REST-Liste zurückgeben
 - klassische Schleifen und Stream-Transformationen vergleichen
 
+Die Lerneinheit 49 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_Enums_REST.md`
+- Übungen: `Uebungen/Uebungen_Enums_REST.md`
+- Musterlösungen: `Musterloesungen/Loesungen_Enums_REST.md`
+- Grafik: `graphics/enums_rest.svg`
+
+Schwerpunkt:
+
+- kontrollierte Zustände statt magischer Strings verstehen
+- `ProduktStatus` als Enum-Wertebereich einführen
+- Enums im Fachmodell und in DTOs verwenden
+- REST-/JSON-Darstellung von Enums prüfen
+- `switch` und Streams mit Enum-Werten in kleinen Beispielen nutzen
+
+Das Integrationsprojekt ist erstellt:
+
+- Projektübersicht: `Projekte/REST_Lagerverwaltung_Erweitern/README.md`
+- Lernendenauftrag: `Projekte/REST_Lagerverwaltung_Erweitern/Lernende/Projektauftrag_REST_Lagerverwaltung_Erweitern.md`
+- Lehrpersonenauftrag: `Projekte/REST_Lagerverwaltung_Erweitern/Lehrperson/Projektauftrag_REST_Lagerverwaltung_Erweitern_LP.md`
+- Musterlösung: `Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung/`
+- Bruno-Requests: `Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung/bruno/`
+- Review: `Projekte/REST_Lagerverwaltung_Erweitern/Review/Projektreview_REST_Lagerverwaltung_Erweitern.md`
+- Reflexion: `Projekte/REST_Lagerverwaltung_Erweitern/Review/Reflexion_REST_Lagerverwaltung_Erweitern.md`
+
+Schwerpunkt:
+
+- DTOs, Collections, Streams und Enums in einem kleinen REST-Projekt festigen
+- `ProduktStatus` als kontrollierten Zustand verwenden
+- REST-Struktur mit Controller, Service und Repository stabil halten
+- Bruno-Workflows für API-Prüfungen einsetzen
+- vollständige Spring-Boot-Musterlösung als Referenzstand bereitstellen
+
 ---
 
 ## Nächste geplante Einheiten
 
-49. REST-Fehlerbehandlung und Statuscodes
-50. Validation bei REST-Requests
-51. Services mit Spring sauber integrieren
-52. Vorbereitung auf JPA und Spring Data
+50. REST-Fehlerbehandlung und Statuscodes
+51. Validation bei REST-Requests
+52. Services mit Spring sauber integrieren
+53. Vorbereitung auf JPA und Spring Data
 
 ---
 
