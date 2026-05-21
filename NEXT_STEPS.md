@@ -110,6 +110,38 @@ Schwerpunkt:
 - REST-/JSON-Darstellung von Enums prüfen
 - `switch` und Streams mit Enum-Werten in kleinen Beispielen nutzen
 
+Die Lerneinheit 50 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_REST_Fehlerbehandlung_Statuscodes.md`
+- Übungen: `Uebungen/Uebungen_REST_Fehlerbehandlung_Statuscodes.md`
+- Musterlösungen: `Musterloesungen/Loesungen_REST_Fehlerbehandlung_Statuscodes.md`
+- Grafik: `graphics/rest_fehlerbehandlung_statuscodes.svg`
+
+Schwerpunkt:
+
+- REST-Fehler kontrolliert zurückgeben
+- HTTP-Statuscodes `200`, `201`, `400`, `404` und `500` sinnvoll einsetzen
+- `ResponseEntity` für Statuscode und JSON-Body verwenden
+- einfache Fehlerantwort als JSON-DTO strukturieren
+- Fehler bei unbekannter Produkt-ID und ungültigem `ProduktStatus` behandeln
+- Fehlerfälle mit Bruno und `curl -i` prüfen
+
+Die Lerneinheit 51 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_Optional_Nullbehandlung.md`
+- Übungen: `Uebungen/Uebungen_Optional_Nullbehandlung.md`
+- Musterlösungen: `Musterloesungen/Loesungen_Optional_Nullbehandlung.md`
+- Grafik: `graphics/optional_nullbehandlung.svg`
+
+Schwerpunkt:
+
+- fehlende Werte bewusst und sichtbar modellieren
+- typische `null`-Probleme und `NullPointerException` vermeiden
+- `Optional<T>` in Repository und Service einfach einsetzen
+- `isPresent()`, `isEmpty()`, `orElse()` und `orElseThrow()` verwenden
+- REST-Fehlerbehandlung mit `Optional.empty()` und `404` verbinden
+- Verantwortlichkeiten zwischen Repository, Service und Controller sauber halten
+
 Das Integrationsprojekt ist erstellt:
 
 - Projektübersicht: `Projekte/REST_Lagerverwaltung_Erweitern/README.md`
@@ -132,10 +164,9 @@ Schwerpunkt:
 
 ## Nächste geplante Einheiten
 
-50. REST-Fehlerbehandlung und Statuscodes
-51. Validation bei REST-Requests
-52. Services mit Spring sauber integrieren
-53. Vorbereitung auf JPA und Spring Data
+52. Validation bei REST-Requests
+53. Services mit Spring sauber integrieren
+54. Vorbereitung auf JPA und Spring Data
 
 ---
 

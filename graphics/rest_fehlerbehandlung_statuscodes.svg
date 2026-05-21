@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">REST-Fehlerbehandlung und Statuscodes</title>
+  <desc id="desc">Die Grafik zeigt den Weg von Bruno oder curl über Controller und Service zum Fehlerfall und zurück als ResponseEntity mit Statuscode und JSON-Fehlerantwort.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #17324d; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #17324d; }
+      .text { font-family: Arial, sans-serif; font-size: 16px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 15px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #7a3e00; }
+      .panel { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelBlue { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .panelOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .panelRed { fill: #fff0f0; stroke: #c95454; stroke-width: 2.5; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineGreen { stroke: #6aa84f; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .lineOrange { stroke: #d9903d; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+      .lineRed { stroke: #c95454; stroke-width: 3; fill: none; marker-end: url(#arrowRed); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6aa84f"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d9903d"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#c95454"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="960"/>
+
+  <text x="800" y="54" text-anchor="middle" class="title">REST-Fehlerbehandlung und Statuscodes</text>
+  <text x="800" y="86" text-anchor="middle" class="subtitle">Fehler kontrolliert als Statuscode und JSON-Antwort zurückgeben</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="155" width="270" height="120" rx="18" class="panelBlue"/>
+  </g>
+  <text x="215" y="197" text-anchor="middle" class="boxTitle">Bruno / curl</text>
+  <text x="215" y="232" text-anchor="middle" class="code">GET /produkte/999</text>
+
+  <g filter="url(#shadow)">
+    <rect x="465" y="155" width="270" height="120" rx="18" class="panel"/>
+  </g>
+  <text x="600" y="197" text-anchor="middle" class="boxTitle">REST Controller</text>
+  <text x="600" y="232" text-anchor="middle" class="small">nimmt Request entgegen</text>
+
+  <g filter="url(#shadow)">
+    <rect x="850" y="155" width="270" height="120" rx="18" class="panel"/>
+  </g>
+  <text x="985" y="197" text-anchor="middle" class="boxTitle">Service</text>
+  <text x="985" y="232" text-anchor="middle" class="small">prüft fachlichen Fall</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1235" y="155" width="285" height="120" rx="18" class="panelRed"/>
+  </g>
+  <text x="1377" y="197" text-anchor="middle" class="boxTitle">Fehlerfall</text>
+  <text x="1377" y="232" text-anchor="middle" class="small">Produkt fehlt oder Status ungültig</text>
+
+  <path d="M350 215 C390 215, 425 215, 465 215" class="line"/>
+  <path d="M735 215 C775 215, 810 215, 850 215" class="line"/>
+  <path d="M1120 215 C1160 215, 1195 215, 1235 215" class="lineRed"/>
+
+  <g filter="url(#shadow)">
+    <rect x="465" y="390" width="655" height="180" rx="20" class="panelOrange"/>
+  </g>
+  <text x="792" y="432" text-anchor="middle" class="boxTitle">ResponseEntity</text>
+  <text x="792" y="470" text-anchor="middle" class="text">Controller formt die HTTP-Antwort</text>
+  <text x="792" y="515" text-anchor="middle" class="code">status + body</text>
+
+  <path d="M1377 275 C1377 360, 1190 480, 1120 480" class="lineOrange"/>
+
+  <g filter="url(#shadow)">
+    <rect x="150" y="665" width="350" height="170" rx="18" class="panelGreen"/>
+  </g>
+  <text x="325" y="707" text-anchor="middle" class="boxTitle">Erfolg</text>
+  <text x="325" y="745" text-anchor="middle" class="code">200 OK</text>
+  <text x="325" y="782" text-anchor="middle" class="code">201 Created</text>
+  <text x="325" y="818" text-anchor="middle" class="small">ProduktDto als JSON</text>
+
+  <g filter="url(#shadow)">
+    <rect x="625" y="665" width="350" height="170" rx="18" class="panelRed"/>
+  </g>
+  <text x="800" y="707" text-anchor="middle" class="boxTitle">Client-Fehler</text>
+  <text x="800" y="745" text-anchor="middle" class="code">400 Bad Request</text>
+  <text x="800" y="782" text-anchor="middle" class="code">404 Not Found</text>
+  <text x="800" y="818" text-anchor="middle" class="small">ErrorResponse als JSON</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1100" y="665" width="350" height="170" rx="18" class="panelOrange"/>
+  </g>
+  <text x="1275" y="707" text-anchor="middle" class="boxTitle">Serverfehler</text>
+  <text x="1275" y="745" text-anchor="middle" class="code">500 Internal Server Error</text>
+  <text x="1275" y="790" text-anchor="middle" class="small">unerwarteter technischer Fehler</text>
+
+  <path d="M675 570 C580 615, 460 635, 325 665" class="lineGreen"/>
+  <path d="M792 570 C792 610, 795 630, 800 665" class="lineRed"/>
+  <path d="M910 570 C1010 615, 1140 635, 1275 665" class="lineOrange"/>
+
+  <g filter="url(#shadow)">
+    <rect x="160" y="875" width="1280" height="56" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="800" y="910" text-anchor="middle" class="note">Der Statuscode sagt, was passiert ist. Der JSON-Body erklärt den Fehler verständlich.</text>
+</svg>

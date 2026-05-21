@@ -96,15 +96,40 @@ Fokus:
 
 ### 50. REST-Fehlerbehandlung und Statuscodes
 
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_REST_Fehlerbehandlung_Statuscodes.md)
+- [Übungen](Uebungen/Uebungen_REST_Fehlerbehandlung_Statuscodes.md)
+- [Musterlösungen](Musterloesungen/Loesungen_REST_Fehlerbehandlung_Statuscodes.md)
+- [Grafik](graphics/rest_fehlerbehandlung_statuscodes.svg)
+
 Fokus:
-- Fehlerbehandlung
-- HTTP-Statuscodes
-- kontrollierte Fehlermeldungen
-- REST-Fehlerstruktur
+- erfolgreiche Antworten und Fehlerantworten unterscheiden
+- HTTP-Statuscodes `200`, `201`, `400`, `404` und `500`
+- `ResponseEntity`
+- einfache JSON-Fehlerantworten
+- Fehler bei unbekannter ID und ungültigem `ProduktStatus`
+- Bruno- und `curl`-Prüfung von Fehlerfällen
 
 ---
 
-### 51. Validation bei REST-Requests
+### 51. Optional und kontrollierte Null-Behandlung
+
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Optional_Nullbehandlung.md)
+- [Übungen](Uebungen/Uebungen_Optional_Nullbehandlung.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Optional_Nullbehandlung.md)
+- [Grafik](graphics/optional_nullbehandlung.svg)
+
+Fokus:
+- Probleme mit `null` und fehlenden Werten
+- `Optional<T>` als sichtbarer Rückgabetyp
+- `isPresent()`, `isEmpty()`, `orElse()` und `orElseThrow()`
+- Repository- und Service-Methoden mit `Optional`
+- REST-Fehlerbehandlung mit `404` und `ResponseEntity`
+
+---
+
+### 52. Validation bei REST-Requests
 
 Fokus:
 - Eingabevalidierung
@@ -114,7 +139,7 @@ Fokus:
 
 ---
 
-### 52. Services mit Spring sauber integrieren
+### 53. Services mit Spring sauber integrieren
 
 Fokus:
 - Dependency Injection
@@ -124,7 +149,7 @@ Fokus:
 
 ---
 
-### 53. Vorbereitung auf JPA und Spring Data
+### 54. Vorbereitung auf JPA und Spring Data
 
 Fokus:
 - Persistenzabstraktion

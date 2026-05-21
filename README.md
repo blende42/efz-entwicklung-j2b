@@ -137,6 +137,40 @@ Fokus:
 
 ---
 
+## 50. REST-Fehlerbehandlung und Statuscodes
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_REST_Fehlerbehandlung_Statuscodes.md)
+- [Übungen](Uebungen/Uebungen_REST_Fehlerbehandlung_Statuscodes.md)
+- [Musterlösungen](Musterloesungen/Loesungen_REST_Fehlerbehandlung_Statuscodes.md)
+- [Grafik](graphics/rest_fehlerbehandlung_statuscodes.svg)
+
+Fokus:
+- REST-Fehler kontrolliert zurückgeben
+- HTTP-Statuscodes `200`, `201`, `400`, `404` und `500` sinnvoll einsetzen
+- `ResponseEntity` für Statuscode und JSON-Body verwenden
+- einfache Fehlerantwort als JSON-DTO strukturieren
+- Fehlerfälle mit Bruno und `curl -i` prüfen
+
+---
+
+## 51. Optional und kontrollierte Null-Behandlung
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Optional_Nullbehandlung.md)
+- [Übungen](Uebungen/Uebungen_Optional_Nullbehandlung.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Optional_Nullbehandlung.md)
+- [Grafik](graphics/optional_nullbehandlung.svg)
+
+Fokus:
+- fehlende Werte sichtbar statt still mit `null` modellieren
+- `Optional<T>` im Repository und Service einsetzen
+- `isPresent()`, `isEmpty()`, `orElse()` und `orElseThrow()` einfach verwenden
+- REST-Fehlerbehandlung mit `Optional.empty()` und `404` verbinden
+- Verantwortlichkeiten zwischen Repository, Service und Controller sauber halten
+
+---
+
 # Repository-Struktur
 
 ## Arbeitsblaetter/
