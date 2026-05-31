@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Technikvergleich JDBC JPA und Spring Data JPA</title>
+  <desc id="desc">Die Grafik zeigt drei Technikpfade: JDBC mit manuellem Mapping und SQL, JPA mit Hibernate, Spring Data JPA mit Repository JPA Hibernate und Datenbank.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #17324d; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .rowTitle { font-family: Arial, sans-serif; font-size: 23px; font-weight: 700; fill: #17324d; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #17324d; }
+      .small { font-family: Arial, sans-serif; font-size: 13px; fill: #1f2d3d; }
+      .note { font-family: Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #7a3e00; }
+      .panelBlue { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .panelGrey { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .panelOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .panelPurple { fill: #f2ecfb; stroke: #8e6bbf; stroke-width: 2.5; }
+      .db { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineGreen { stroke: #6aa84f; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .lineOrange { stroke: #d9903d; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6aa84f"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d9903d"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="980"/>
+  <text x="800" y="54" text-anchor="middle" class="title">JDBC, JPA und Spring Data JPA vergleichen</text>
+  <text x="800" y="86" text-anchor="middle" class="subtitle">Je höher die Abstraktion, desto weniger eigener SQL- und Mapping-Code steht im Repository.</text>
+
+  <text x="190" y="190" text-anchor="end" class="rowTitle">JDBC</text>
+  <g filter="url(#shadow)">
+    <rect x="250" y="145" width="180" height="86" rx="12" class="panelBlue"/>
+    <rect x="510" y="145" width="220" height="86" rx="12" class="panelOrange"/>
+    <rect x="810" y="145" width="180" height="86" rx="12" class="panelOrange"/>
+    <rect x="1070" y="145" width="220" height="86" rx="12" class="db"/>
+  </g>
+  <text x="340" y="178" text-anchor="middle" class="boxTitle">Produkt</text>
+  <text x="340" y="204" text-anchor="middle" class="small">Java-Objekt</text>
+  <text x="620" y="178" text-anchor="middle" class="boxTitle">manuelles Mapping</text>
+  <text x="620" y="204" text-anchor="middle" class="small">ResultSet lesen</text>
+  <text x="900" y="178" text-anchor="middle" class="boxTitle">SQL</text>
+  <text x="900" y="204" text-anchor="middle" class="small">selbst schreiben</text>
+  <text x="1180" y="178" text-anchor="middle" class="boxTitle">Datenbank</text>
+  <text x="1180" y="204" text-anchor="middle" class="small">H2</text>
+  <path d="M430 188 L510 188" class="lineOrange"/>
+  <path d="M730 188 L810 188" class="lineOrange"/>
+  <path d="M990 188 L1070 188" class="lineOrange"/>
+
+  <text x="190" y="430" text-anchor="end" class="rowTitle">JPA</text>
+  <g filter="url(#shadow)">
+    <rect x="250" y="385" width="180" height="86" rx="12" class="panelBlue"/>
+    <rect x="520" y="385" width="180" height="86" rx="12" class="panelPurple"/>
+    <rect x="790" y="385" width="200" height="86" rx="12" class="panelGreen"/>
+    <rect x="1070" y="385" width="220" height="86" rx="12" class="db"/>
+  </g>
+  <text x="340" y="418" text-anchor="middle" class="boxTitle">Produkt</text>
+  <text x="340" y="444" text-anchor="middle" class="small">@Entity</text>
+  <text x="610" y="418" text-anchor="middle" class="boxTitle">JPA</text>
+  <text x="610" y="444" text-anchor="middle" class="small">Standard</text>
+  <text x="890" y="418" text-anchor="middle" class="boxTitle">Hibernate</text>
+  <text x="890" y="444" text-anchor="middle" class="small">Implementierung</text>
+  <text x="1180" y="418" text-anchor="middle" class="boxTitle">Datenbank</text>
+  <text x="1180" y="444" text-anchor="middle" class="small">H2</text>
+  <path d="M430 428 L520 428" class="lineGreen"/>
+  <path d="M700 428 L790 428" class="lineGreen"/>
+  <path d="M990 428 L1070 428" class="lineGreen"/>
+
+  <text x="190" y="670" text-anchor="end" class="rowTitle">Spring Data JPA</text>
+  <g filter="url(#shadow)">
+    <rect x="220" y="625" width="170" height="86" rx="12" class="panelBlue"/>
+    <rect x="450" y="625" width="260" height="86" rx="12" class="panelGrey"/>
+    <rect x="770" y="625" width="150" height="86" rx="12" class="panelPurple"/>
+    <rect x="980" y="625" width="180" height="86" rx="12" class="panelGreen"/>
+    <rect x="1220" y="625" width="210" height="86" rx="12" class="db"/>
+  </g>
+  <text x="305" y="658" text-anchor="middle" class="boxTitle">Produkt</text>
+  <text x="305" y="684" text-anchor="middle" class="small">@Entity</text>
+  <text x="580" y="658" text-anchor="middle" class="boxTitle">Spring Data Repository</text>
+  <text x="580" y="684" text-anchor="middle" class="small">JpaRepository</text>
+  <text x="845" y="658" text-anchor="middle" class="boxTitle">JPA</text>
+  <text x="845" y="684" text-anchor="middle" class="small">Standard</text>
+  <text x="1070" y="658" text-anchor="middle" class="boxTitle">Hibernate</text>
+  <text x="1070" y="684" text-anchor="middle" class="small">Implementierung</text>
+  <text x="1325" y="658" text-anchor="middle" class="boxTitle">Datenbank</text>
+  <text x="1325" y="684" text-anchor="middle" class="small">H2</text>
+  <path d="M390 668 L450 668" class="line"/>
+  <path d="M710 668 L770 668" class="line"/>
+  <path d="M920 668 L980 668" class="line"/>
+  <path d="M1160 668 L1220 668" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="190" y="810" width="1220" height="112" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="800" y="846" text-anchor="middle" class="note">Spring Data JPA baut auf JPA auf.</text>
+  <text x="800" y="876" text-anchor="middle" class="note">JPA baut nicht auf Spring auf.</text>
+  <text x="800" y="906" text-anchor="middle" class="note">JPA kann auch ohne Spring verwendet werden.</text>
+</svg>

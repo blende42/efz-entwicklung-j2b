@@ -58,7 +58,6 @@ Vorausgesetzt werden:
 
 # Nächste Themenblöcke
 
-- JPA und Spring Data Grundlagen
 - Integrationstests
 - Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
@@ -222,15 +221,26 @@ Fokus:
 
 ---
 
-# Geplanter Abschluss j2b
-
 ## 55. JPA und Spring Data Grundlagen
 
-Geplant:
-- JPA-Entity als persistentes Fachobjekt
-- Spring Data Repositorys
-- CRUD-Zugriffe über bestehende Services
-- Vorbereitung auf mehrere zusammenhängende Fachobjekte
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_JPA_Spring_Data_Grundlagen.md)
+- [Übungen](Uebungen/Uebungen_JPA_Spring_Data_Grundlagen.md)
+- [Musterlösungen](Musterloesungen/Loesungen_JPA_Spring_Data_Grundlagen.md)
+- [Architekturgrafik](graphics/jpa_spring_data_architektur.svg)
+- [Technikvergleich](graphics/jdbc_jpa_spring_data_vergleich.svg)
+
+Fokus:
+- JDBC-Mapping-Aufwand sichtbar machen
+- JPA als Java-Standard für Objekt-Persistenz einordnen
+- Hibernate als JPA-Implementierung erklären
+- Spring Data JPA als Spring-Integration über JPA verstehen
+- `@Entity`, `@Id`, `@GeneratedValue` und `JpaRepository` in einfachen Beispielen verwenden
+- Controller, Service und Repository als Architektur beibehalten
+
+---
+
+# Geplanter Abschluss j2b
 
 ## 56. Integrationstests
 

@@ -187,12 +187,21 @@ Fokus:
 
 ### 55. JPA und Spring Data Grundlagen
 
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_JPA_Spring_Data_Grundlagen.md)
+- [Übungen](Uebungen/Uebungen_JPA_Spring_Data_Grundlagen.md)
+- [Musterlösungen](Musterloesungen/Loesungen_JPA_Spring_Data_Grundlagen.md)
+- [Architekturgrafik](graphics/jpa_spring_data_architektur.svg)
+- [Technikvergleich](graphics/jdbc_jpa_spring_data_vergleich.svg)
+
 Fokus:
-- JPA-Entity als persistentes Fachobjekt
-- einfache Beziehungen vorbereiten
-- Spring Data Repositorys einführen
+- JDBC-Aufwand mit SQL, Mapping und Boilerplate sichtbar machen
+- JPA als Java-Standard für Objekt-Persistenz
+- Hibernate als JPA-Implementierung
+- Spring Data JPA als Spring-Integration auf Basis von JPA
+- `@Entity`, `@Id`, `@GeneratedValue` und `JpaRepository`
 - bestehende Service-Struktur beibehalten
-- CRUD-Zugriffe mit Spring Data nachvollziehen
+- Persistenz abstrahieren, ohne die Architektur abzukürzen
 
 ---
 

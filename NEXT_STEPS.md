@@ -190,6 +190,25 @@ Schwerpunkt:
 - Architektur und Verdrahtung unterscheiden
 - JPA/Spring Data vorbereiten, ohne JPA bereits einzuführen
 
+Die Lerneinheit 55 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_JPA_Spring_Data_Grundlagen.md`
+- Übungen: `Uebungen/Uebungen_JPA_Spring_Data_Grundlagen.md`
+- Musterlösungen: `Musterloesungen/Loesungen_JPA_Spring_Data_Grundlagen.md`
+- Grafiken:
+  - `graphics/jpa_spring_data_architektur.svg`
+  - `graphics/jdbc_jpa_spring_data_vergleich.svg`
+
+Schwerpunkt:
+
+- JDBC-Mapping-Aufwand mit SQL, `ResultSet` und Objektaufbau sichtbar machen
+- JPA als Java-Standard für Objekt-Persistenz erklären
+- Hibernate als konkrete JPA-Implementierung einordnen
+- Spring Data JPA als Spring-Integration auf Basis von JPA erklären
+- `@Entity`, `@Id`, `@GeneratedValue` und `JpaRepository` auf EFZ-Niveau einführen
+- Architektur `Controller -> Service -> Repository` trotz Persistenz-Abstraktion beibehalten
+- bewusst noch keine komplexen JPA-Themen wie `EntityManager`, Persistence Context, Lazy Loading, Cascade oder Beziehungen behandeln
+
 Das Integrationsprojekt ist erstellt:
 
 - Projektübersicht: `Projekte/REST_Lagerverwaltung_Erweitern/README.md`
@@ -212,7 +231,6 @@ Schwerpunkt:
 
 ## Nächste geplante Einheiten
 
-55. JPA und Spring Data Grundlagen
 56. Integrationstests
 57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
