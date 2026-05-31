@@ -149,11 +149,20 @@ Fokus:
 
 ### 53. Services mit Spring sauber integrieren
 
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Spring_Services_DI.md)
+- [Übungen](Uebungen/Uebungen_Spring_Services_DI.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Spring_Services_DI.md)
+- [Grafik](graphics/spring_services_di.svg)
+
 Fokus:
 - Dependency Injection
-- Verantwortlichkeiten
-- Spring als Infrastruktur
-- bestehende Services weiterverwenden
+- `@RestController`, `@Service` und `@Repository`
+- Constructor Injection
+- Verantwortlichkeiten zwischen Controller, Service und Repository
+- Spring als Infrastruktur für Objekterzeugung und Verdrahtung
+- bestehende Services und Repositorys weiterverwenden
+- manuelle `new`-Aufrufe im Controller und Service vermeiden
 
 ---
 

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Services mit Spring sauber integrieren</title>
+  <desc id="desc">Die Grafik zeigt Controller, Service und Repository mit Constructor Injection sowie den Spring Container, der diese Objekte erzeugt und verbindet.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #17324d; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #17324d; }
+      .text { font-family: Arial, sans-serif; font-size: 16px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 15px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #7a3e00; }
+      .panel { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelBlue { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .panelOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .panelGrey { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .container { fill: #eef6ff; stroke: #2f6fa3; stroke-width: 3; stroke-dasharray: 12 8; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineGreen { stroke: #6aa84f; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .lineOrange { stroke: #d9903d; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6aa84f"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d9903d"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="960"/>
+
+  <text x="800" y="54" text-anchor="middle" class="title">Services mit Spring sauber integrieren</text>
+  <text x="800" y="86" text-anchor="middle" class="subtitle">Die Architektur bleibt gleich. Spring erzeugt und verbindet die Objekte.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="165" width="360" height="135" rx="18" class="panelBlue"/>
+  </g>
+  <text x="270" y="208" text-anchor="middle" class="boxTitle">REST Controller</text>
+  <text x="270" y="244" text-anchor="middle" class="code">@RestController</text>
+  <text x="270" y="276" text-anchor="middle" class="small">HTTP-Request und HTTP-Response</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="405" width="360" height="135" rx="18" class="panelGreen"/>
+  </g>
+  <text x="270" y="448" text-anchor="middle" class="boxTitle">Service</text>
+  <text x="270" y="484" text-anchor="middle" class="code">@Service</text>
+  <text x="270" y="516" text-anchor="middle" class="small">Fachlogik und Ablauf</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="645" width="360" height="135" rx="18" class="panelGrey"/>
+  </g>
+  <text x="270" y="688" text-anchor="middle" class="boxTitle">Repository</text>
+  <text x="270" y="724" text-anchor="middle" class="code">@Repository</text>
+  <text x="270" y="756" text-anchor="middle" class="small">Datenzugriff</text>
+
+  <path d="M270 300 C270 340, 270 365, 270 405" class="lineGreen"/>
+  <text x="485" y="356" class="small">Constructor Injection</text>
+
+  <path d="M270 540 C270 580, 270 605, 270 645" class="lineGreen"/>
+  <text x="485" y="596" class="small">Constructor Injection</text>
+
+  <g filter="url(#shadow)">
+    <rect x="730" y="145" width="735" height="660" rx="24" class="container"/>
+  </g>
+  <text x="1098" y="198" text-anchor="middle" class="boxTitle">Spring Container</text>
+  <text x="1098" y="235" text-anchor="middle" class="text">erzeugt und verbindet Objekte</text>
+
+  <g filter="url(#shadow)">
+    <rect x="810" y="300" width="260" height="105" rx="18" class="panelBlue"/>
+  </g>
+  <text x="940" y="340" text-anchor="middle" class="boxTitle">ProduktController</text>
+  <text x="940" y="373" text-anchor="middle" class="small">braucht ProduktService</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1180" y="300" width="240" height="105" rx="18" class="panelGreen"/>
+  </g>
+  <text x="1300" y="340" text-anchor="middle" class="boxTitle">ProduktService</text>
+  <text x="1300" y="373" text-anchor="middle" class="small">braucht Repository</text>
+
+  <g filter="url(#shadow)">
+    <rect x="995" y="545" width="270" height="105" rx="18" class="panelGrey"/>
+  </g>
+  <text x="1130" y="585" text-anchor="middle" class="boxTitle">ProduktRepository</text>
+  <text x="1130" y="618" text-anchor="middle" class="small">wird von Spring bereitgestellt</text>
+
+  <path d="M1070 352 C1105 352, 1145 352, 1180 352" class="lineOrange"/>
+  <path d="M1300 405 C1300 470, 1210 520, 1160 545" class="lineOrange"/>
+  <path d="M730 352 C620 300, 540 245, 450 230" class="line"/>
+  <path d="M730 600 C610 625, 540 680, 450 710" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="755" y="705" width="685" height="65" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="1098" y="744" text-anchor="middle" class="note">Spring verdrahtet. Fachlogik bleibt im Service.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="160" y="875" width="1280" height="56" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="800" y="910" text-anchor="middle" class="note">Architektur bleibt gleich, nur die Verdrahtung ändert sich.</text>
+</svg>

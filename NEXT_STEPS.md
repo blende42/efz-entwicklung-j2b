@@ -158,6 +158,22 @@ Schwerpunkt:
 - Validation klar von Fachlogik im Service trennen
 - Bruno und `curl -i` zur Prüfung von Validierungsfehlern einsetzen
 
+Die Lerneinheit 53 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_Spring_Services_DI.md`
+- Übungen: `Uebungen/Uebungen_Spring_Services_DI.md`
+- Musterlösungen: `Musterloesungen/Loesungen_Spring_Services_DI.md`
+- Grafik: `graphics/spring_services_di.svg`
+
+Schwerpunkt:
+
+- Spring als Infrastruktur für Objekterzeugung und Verdrahtung verstehen
+- `@RestController`, `@Service` und `@Repository` ihren Rollen zuordnen
+- Constructor Injection im Controller und Service verwenden
+- manuelle `new`-Aufrufe für Services und Repositorys vermeiden
+- Fachlogik im Service und Datenzugriff im Repository belassen
+- bestehende Bruno- und `curl`-Prüfungen nach der DI-Umstellung erneut ausführen
+
 Das Integrationsprojekt ist erstellt:
 
 - Projektübersicht: `Projekte/REST_Lagerverwaltung_Erweitern/README.md`
@@ -180,7 +196,6 @@ Schwerpunkt:
 
 ## Nächste geplante Einheiten
 
-53. Services mit Spring sauber integrieren
 54. Vorbereitung auf JPA und Spring Data
 
 ---
@@ -245,6 +260,7 @@ Spring unterstützt:
 
 - DTOs bewusst klein und kontrolliert einführen
 - Validation bleibt zunächst request-nah und einfach
+- Dependency Injection bleibt zunächst auf Constructor Injection beschränkt
 - JPA erst nach stabiler REST-Struktur behandeln
 - Spring weiterhin kontrolliert und transparent einsetzen
 - HTTP und REST weiterhin technisch nachvollziehbar halten

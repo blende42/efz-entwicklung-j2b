@@ -58,7 +58,6 @@ Vorausgesetzt werden:
 
 # Nächste Themenblöcke
 
-- Dependency Injection
 - Spring-Konfiguration
 - Vorbereitung auf JPA/Spring Data
 - Integrationstests
@@ -184,6 +183,24 @@ Fokus:
 - einfache `400 Bad Request`-Antworten mit `ErrorResponse` zurückgeben
 - Validation von Fachlogik im Service trennen
 - Bruno und `curl -i` zur Prüfung von Validierungsfehlern einsetzen
+
+---
+
+## 53. Services mit Spring sauber integrieren
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Spring_Services_DI.md)
+- [Übungen](Uebungen/Uebungen_Spring_Services_DI.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Spring_Services_DI.md)
+- [Grafik](graphics/spring_services_di.svg)
+
+Fokus:
+- Spring als Infrastruktur für Objekterzeugung und Verdrahtung verstehen
+- `@RestController`, `@Service` und `@Repository` ihren Rollen zuordnen
+- Constructor Injection im Controller und Service verwenden
+- manuelle `new`-Aufrufe für Services und Repositorys vermeiden
+- Fachlogik im Service und Datenzugriff im Repository belassen
+- bestehende Bruno- und `curl`-Prüfungen nach der DI-Umstellung erneut ausführen
 
 ---
 
