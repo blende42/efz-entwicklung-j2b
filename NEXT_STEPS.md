@@ -216,6 +216,7 @@ Das Integrationsprojekt ist erstellt:
 - Lehrpersonenauftrag: `Projekte/REST_Lagerverwaltung_Erweitern/Lehrperson/Projektauftrag_REST_Lagerverwaltung_Erweitern_LP.md`
 - Musterlösung: `Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung/`
 - Bruno-Requests: `Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung/bruno/`
+- Zusätzliche Musterlösung JPA und Integrationstests: `Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung_JPA_Integrationstests/`
 - Review: `Projekte/REST_Lagerverwaltung_Erweitern/Review/Projektreview_REST_Lagerverwaltung_Erweitern.md`
 - Reflexion: `Projekte/REST_Lagerverwaltung_Erweitern/Review/Reflexion_REST_Lagerverwaltung_Erweitern.md`
 
@@ -226,12 +227,29 @@ Schwerpunkt:
 - REST-Struktur mit Controller, Service und Repository stabil halten
 - Bruno-Workflows für API-Prüfungen einsetzen
 - vollständige Spring-Boot-Musterlösung als Referenzstand bereitstellen
+- zusätzliche Musterlösung mit JPA, Spring Data, H2, Validation und MockMvc-Integrationstests als Zielstruktur bereitstellen
+
+Die Lerneinheit 56 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_Integrationstests.md`
+- Übungen: `Uebungen/Uebungen_Integrationstests.md`
+- Musterlösungen: `Musterloesungen/Loesungen_Integrationstests.md`
+- Grafik: `graphics/integrationstests_architektur.svg`
+
+Schwerpunkt:
+
+- Unit-Tests und Integrationstests unterscheiden
+- REST-Abläufe mit Spring Boot und MockMvc automatisiert prüfen
+- Controller, Validation, Service, Repository und H2-Testdatenbank gemeinsam testen
+- erfolgreiche Requests und Fehlerfälle mit Statuscodes und JSON-Antworten absichern
+- Datenbankzustand in wichtigen Fällen prüfen
+- Testbarkeit als Qualitätsmerkmal sauberer Architektur verstehen
+- bewusst noch keine Themen wie Mockito, Testcontainer, Docker, WireMock, Performance-Tests oder Security-Tests behandeln
 
 ---
 
 ## Nächste geplante Einheiten
 
-56. Integrationstests
 57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
 ---

@@ -1,0 +1,23 @@
+meta {
+  name: 03 Produkt erstellen
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/produkte
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Headset",
+    "preis": 79.9,
+    "status": "AKTIV"
+  }
+}

@@ -6,6 +6,8 @@ Dieses Integrationsprojekt festigt die bisherigen Konzepte aus REST, DTOs, Colle
 
 Die Lernenden erweitern eine REST-Lagerverwaltung so, dass Produkte über eine kontrollierte JSON-Struktur gelesen, angelegt, nach Status gefiltert und im Status geändert werden können.
 
+Zusätzlich gibt es eine separate Musterlösung als Referenz für die spätere Zielstruktur mit JPA, Spring Data, H2, Validation und Integrationstests.
+
 ---
 
 ## Fachlicher Kontext
@@ -44,6 +46,15 @@ Nicht Teil dieses Projekts:
 - komplexe Fehlerbehandlung
 - Datenbankintegration
 
+Zusätzlich zeigt die separate Musterlösung als weiterführender Referenzstand:
+
+- JPA-Entity
+- Spring Data Repository
+- H2-Datenbank
+- Bean Validation
+- einfache Fehlerantworten
+- MockMvc-Integrationstests
+
 ---
 
 ## Projektmaterial
@@ -51,6 +62,7 @@ Nicht Teil dieses Projekts:
 - [Projektauftrag für Lernende](Lernende/Projektauftrag_REST_Lagerverwaltung_Erweitern.md)
 - [Projektauftrag für Lehrpersonen](Lehrperson/Projektauftrag_REST_Lagerverwaltung_Erweitern_LP.md)
 - [Musterlösung](Musterloesung/README.md)
+- [Zusätzliche Musterlösung JPA und Integrationstests](Musterloesung_JPA_Integrationstests/README.md)
 - [Projektreview](Review/Projektreview_REST_Lagerverwaltung_Erweitern.md)
 - [Reflexion](Review/Reflexion_REST_Lagerverwaltung_Erweitern.md)
 
@@ -67,3 +79,5 @@ Client / Bruno
 ```
 
 Die REST-API gibt DTOs zurück. Das Fachmodell bleibt intern.
+
+Die zusätzliche Musterlösung verwendet anstelle der In-Memory-Collection ein Spring Data Repository mit H2.

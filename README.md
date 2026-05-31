@@ -58,7 +58,6 @@ Vorausgesetzt werden:
 
 # Nächste Themenblöcke
 
-- Integrationstests
 - Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
 ---
@@ -238,16 +237,25 @@ Fokus:
 - `@Entity`, `@Id`, `@GeneratedValue` und `JpaRepository` in einfachen Beispielen verwenden
 - Controller, Service und Repository als Architektur beibehalten
 
+## 56. Integrationstests
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Integrationstests.md)
+- [Übungen](Uebungen/Uebungen_Integrationstests.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Integrationstests.md)
+- [Grafik](graphics/integrationstests_architektur.svg)
+
+Fokus:
+- Unit-Tests und Integrationstests unterscheiden
+- REST-Abläufe mit MockMvc automatisiert prüfen
+- Controller, Validation, Service, Repository und Datenbank gemeinsam testen
+- erfolgreiche Requests und Fehlerfälle absichern
+- H2 als kontrollierte Testdatenbank einordnen
+- Testbarkeit als Qualitätsmerkmal sauberer Architektur verstehen
+
 ---
 
 # Geplanter Abschluss j2b
-
-## 56. Integrationstests
-
-Geplant:
-- REST-Endpunkte automatisiert prüfen
-- Zusammenspiel von Controller, Service, Repository und Datenbank testen
-- erfolgreiche Abläufe und Fehlerfälle absichern
 
 ## 57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
@@ -317,6 +325,7 @@ Erstellt:
 - [Projektauftrag für Lernende](Projekte/REST_Lagerverwaltung_Erweitern/Lernende/Projektauftrag_REST_Lagerverwaltung_Erweitern.md)
 - [Projektauftrag für Lehrpersonen](Projekte/REST_Lagerverwaltung_Erweitern/Lehrperson/Projektauftrag_REST_Lagerverwaltung_Erweitern_LP.md)
 - [Musterlösung](Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung/README.md)
+- [Zusätzliche Musterlösung JPA und Integrationstests](Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung_JPA_Integrationstests/README.md)
 - [Projektreview](Projekte/REST_Lagerverwaltung_Erweitern/Review/Projektreview_REST_Lagerverwaltung_Erweitern.md)
 - [Reflexion](Projekte/REST_Lagerverwaltung_Erweitern/Review/Reflexion_REST_Lagerverwaltung_Erweitern.md)
 
@@ -326,6 +335,7 @@ Fokus:
 - Controller, Service und Repository sauber trennen
 - Bruno-Workflows für API-Prüfungen verwenden
 - vollständige lauffähige Spring-Boot-Musterlösung als Referenzstand bereitstellen
+- zusätzliche Musterlösung mit JPA, Spring Data, H2, Validation und MockMvc-Integrationstests bereitstellen
 
 ---
 

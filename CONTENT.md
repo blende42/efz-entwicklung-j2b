@@ -207,9 +207,17 @@ Fokus:
 
 ### 56. Integrationstests
 
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Integrationstests.md)
+- [Übungen](Uebungen/Uebungen_Integrationstests.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Integrationstests.md)
+- [Grafik](graphics/integrationstests_architektur.svg)
+
 Fokus:
+- Unit-Test und Integrationstest unterscheiden
 - REST-Endpunkte mit Spring Boot testen
-- Zusammenspiel von Controller, Service, Repository und Datenbank prüfen
+- Zusammenspiel von Controller, Validation, Service, Repository und Datenbank prüfen
+- MockMvc für automatisierte REST-Requests verwenden
 - Testdaten kontrolliert vorbereiten
 - erfolgreiche Abläufe und Fehlerfälle absichern
 - Bruno-Workflows und automatisierte Tests unterscheiden
@@ -269,6 +277,7 @@ Material:
 - [Projektauftrag für Lernende](Projekte/REST_Lagerverwaltung_Erweitern/Lernende/Projektauftrag_REST_Lagerverwaltung_Erweitern.md)
 - [Projektauftrag für Lehrpersonen](Projekte/REST_Lagerverwaltung_Erweitern/Lehrperson/Projektauftrag_REST_Lagerverwaltung_Erweitern_LP.md)
 - [Musterlösung](Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung/README.md)
+- [Zusätzliche Musterlösung JPA und Integrationstests](Projekte/REST_Lagerverwaltung_Erweitern/Musterloesung_JPA_Integrationstests/README.md)
 - [Projektreview](Projekte/REST_Lagerverwaltung_Erweitern/Review/Projektreview_REST_Lagerverwaltung_Erweitern.md)
 - [Reflexion](Projekte/REST_Lagerverwaltung_Erweitern/Review/Reflexion_REST_Lagerverwaltung_Erweitern.md)
 
@@ -277,7 +286,8 @@ Fokus:
 - Collections
 - Streams
 - Enums mit `ProduktStatus`
-- strukturierte REST-API ohne JPA, Security und Validation
+- strukturierte REST-API als Lernendenauftrag
+- zusätzliche Musterlösung mit JPA, Spring Data, H2, Validation und MockMvc-Integrationstests
 - Bruno-Workflows
 - vollständige Spring-Boot-Musterlösung als Referenzstand
 
