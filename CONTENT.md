@@ -226,7 +226,15 @@ Fokus:
 
 ### 57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
-Fachlicher Rahmen:
+Material:
+- [Projektübersicht](Projekte/Mini_Shop_Bestellverwaltung/README.md)
+- [Projektauftrag für Lernende](Projekte/Mini_Shop_Bestellverwaltung/Lernende/Projektauftrag_Mini_Shop_Bestellverwaltung.md)
+- [Projektauftrag für Lehrpersonen](Projekte/Mini_Shop_Bestellverwaltung/Lehrperson/Projektauftrag_Mini_Shop_Bestellverwaltung_LP.md)
+- [Musterlösung](Projekte/Mini_Shop_Bestellverwaltung/Musterloesung/README.md)
+- [Projektreview](Projekte/Mini_Shop_Bestellverwaltung/Review/Projektreview_Mini_Shop_Bestellverwaltung.md)
+- [Reflexion](Projekte/Mini_Shop_Bestellverwaltung/Review/Reflexion_Mini_Shop_Bestellverwaltung.md)
+
+Fokus:
 - Produkt
 - Kategorie
 - Kunde
@@ -235,8 +243,6 @@ Fachlicher Rahmen:
 - Bestand prüfen
 - Bestand reduzieren
 - Bestellungen anzeigen
-
-Technische Konsolidierung:
 - REST
 - DTOs
 - Validation
@@ -288,6 +294,26 @@ Fokus:
 - Enums mit `ProduktStatus`
 - strukturierte REST-API als Lernendenauftrag
 - zusätzliche Musterlösung mit JPA, Spring Data, H2, Validation und MockMvc-Integrationstests
+- Bruno-Workflows
+- vollständige Spring-Boot-Musterlösung als Referenzstand
+
+---
+
+## Mini-Shop / Bestellverwaltung
+
+Material:
+- [Projektübersicht](Projekte/Mini_Shop_Bestellverwaltung/README.md)
+- [Projektauftrag für Lernende](Projekte/Mini_Shop_Bestellverwaltung/Lernende/Projektauftrag_Mini_Shop_Bestellverwaltung.md)
+- [Projektauftrag für Lehrpersonen](Projekte/Mini_Shop_Bestellverwaltung/Lehrperson/Projektauftrag_Mini_Shop_Bestellverwaltung_LP.md)
+- [Musterlösung](Projekte/Mini_Shop_Bestellverwaltung/Musterloesung/README.md)
+- [Projektreview](Projekte/Mini_Shop_Bestellverwaltung/Review/Projektreview_Mini_Shop_Bestellverwaltung.md)
+- [Reflexion](Projekte/Mini_Shop_Bestellverwaltung/Review/Reflexion_Mini_Shop_Bestellverwaltung.md)
+
+Fokus:
+- Abschlussprojekt j2b
+- Mini-Shop mit Kategorien, Produkten, Kunden, Bestellungen und Bestellpositionen
+- Bestandprüfung und Bestandreduktion
+- REST, DTOs, Validation, DI, JPA/Spring Data und Integrationstests
 - Bruno-Workflows
 - vollständige Spring-Boot-Musterlösung als Referenzstand
 

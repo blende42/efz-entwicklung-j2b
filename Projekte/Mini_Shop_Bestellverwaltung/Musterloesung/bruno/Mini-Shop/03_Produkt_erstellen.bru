@@ -1,0 +1,24 @@
+meta {
+  name: 03 Produkt erstellen
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/produkte
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Webcam",
+    "preis": 89.9,
+    "bestand": 7,
+    "kategorieId": 1
+  }
+}

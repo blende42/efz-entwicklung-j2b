@@ -56,12 +56,6 @@ Vorausgesetzt werden:
 
 ---
 
-# Nächste Themenblöcke
-
-- Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
-
----
-
 # Lerneinheiten
 
 ## 46. JSON-Strukturen und DTOs in REST-APIs
@@ -255,11 +249,17 @@ Fokus:
 
 ---
 
-# Geplanter Abschluss j2b
-
 ## 57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
-Fachlicher Rahmen:
+Erstellt:
+- [Projektübersicht](Projekte/Mini_Shop_Bestellverwaltung/README.md)
+- [Projektauftrag für Lernende](Projekte/Mini_Shop_Bestellverwaltung/Lernende/Projektauftrag_Mini_Shop_Bestellverwaltung.md)
+- [Projektauftrag für Lehrpersonen](Projekte/Mini_Shop_Bestellverwaltung/Lehrperson/Projektauftrag_Mini_Shop_Bestellverwaltung_LP.md)
+- [Musterlösung](Projekte/Mini_Shop_Bestellverwaltung/Musterloesung/README.md)
+- [Projektreview](Projekte/Mini_Shop_Bestellverwaltung/Review/Projektreview_Mini_Shop_Bestellverwaltung.md)
+- [Reflexion](Projekte/Mini_Shop_Bestellverwaltung/Review/Reflexion_Mini_Shop_Bestellverwaltung.md)
+
+Fokus:
 - Produkt
 - Kategorie
 - Kunde
@@ -268,8 +268,6 @@ Fachlicher Rahmen:
 - Bestand prüfen
 - Bestand reduzieren
 - Bestellungen anzeigen
-
-Technische Konsolidierung:
 - REST
 - DTOs
 - Validation
@@ -336,6 +334,25 @@ Fokus:
 - Bruno-Workflows für API-Prüfungen verwenden
 - vollständige lauffähige Spring-Boot-Musterlösung als Referenzstand bereitstellen
 - zusätzliche Musterlösung mit JPA, Spring Data, H2, Validation und MockMvc-Integrationstests bereitstellen
+
+---
+
+### Mini-Shop / Bestellverwaltung
+
+Erstellt:
+- [Projektübersicht](Projekte/Mini_Shop_Bestellverwaltung/README.md)
+- [Projektauftrag für Lernende](Projekte/Mini_Shop_Bestellverwaltung/Lernende/Projektauftrag_Mini_Shop_Bestellverwaltung.md)
+- [Projektauftrag für Lehrpersonen](Projekte/Mini_Shop_Bestellverwaltung/Lehrperson/Projektauftrag_Mini_Shop_Bestellverwaltung_LP.md)
+- [Musterlösung](Projekte/Mini_Shop_Bestellverwaltung/Musterloesung/README.md)
+- [Projektreview](Projekte/Mini_Shop_Bestellverwaltung/Review/Projektreview_Mini_Shop_Bestellverwaltung.md)
+- [Reflexion](Projekte/Mini_Shop_Bestellverwaltung/Review/Reflexion_Mini_Shop_Bestellverwaltung.md)
+
+Fokus:
+- j2b mit einem fachlich zusammenhängenden Mini-Shop abschliessen
+- Kategorien, Produkte, Kunden, Bestellungen und Bestellpositionen modellieren
+- Bestand prüfen und bei Bestellung reduzieren
+- REST, DTOs, Validation, DI, JPA/Spring Data und Integrationstests zusammenführen
+- Bruno-Workflows für Erfolgs- und Fehlerfälle bereitstellen
 
 ---
 

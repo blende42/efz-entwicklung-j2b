@@ -1,0 +1,21 @@
+meta {
+  name: 01 Kategorie erstellen
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/kategorien
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Software"
+  }
+}

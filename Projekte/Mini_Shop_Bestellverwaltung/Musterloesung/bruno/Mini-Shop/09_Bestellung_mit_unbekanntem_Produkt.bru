@@ -1,0 +1,27 @@
+meta {
+  name: 09 Bestellung mit unbekanntem Produkt
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:8080/bestellungen
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "kundeId": 1,
+    "positionen": [
+      {
+        "produktId": 999999,
+        "menge": 1
+      }
+    ]
+  }
+}

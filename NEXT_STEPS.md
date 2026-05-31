@@ -248,9 +248,24 @@ Schwerpunkt:
 
 ---
 
-## Nächste geplante Einheiten
+Das Abschlussprojekt j2b ist erstellt:
 
-57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
+- Projektübersicht: `Projekte/Mini_Shop_Bestellverwaltung/README.md`
+- Lernendenauftrag: `Projekte/Mini_Shop_Bestellverwaltung/Lernende/Projektauftrag_Mini_Shop_Bestellverwaltung.md`
+- Lehrpersonenauftrag: `Projekte/Mini_Shop_Bestellverwaltung/Lehrperson/Projektauftrag_Mini_Shop_Bestellverwaltung_LP.md`
+- Musterlösung: `Projekte/Mini_Shop_Bestellverwaltung/Musterloesung/`
+- Bruno-Requests: `Projekte/Mini_Shop_Bestellverwaltung/Musterloesung/bruno/`
+- Review: `Projekte/Mini_Shop_Bestellverwaltung/Review/Projektreview_Mini_Shop_Bestellverwaltung.md`
+- Reflexion: `Projekte/Mini_Shop_Bestellverwaltung/Review/Reflexion_Mini_Shop_Bestellverwaltung.md`
+
+Schwerpunkt:
+
+- j2b mit einem fachlich zusammenhängenden Mini-Shop abschliessen
+- Kategorie, Produkt, Kunde, Bestellung und Bestellposition modellieren
+- Bestand prüfen und bei erfolgreicher Bestellung reduzieren
+- REST, DTOs, Validation, DI, JPA/Spring Data und Integrationstests konsolidieren
+- Bruno-Workflows für Erfolgs- und Fehlerfälle bereitstellen
+- bewusst noch keine Security, Login, JWT/OAuth, Frontend, Payment, Versand, Rabatte, Rechnungen oder Microservices behandeln
 
 ---
 
@@ -321,13 +336,13 @@ Spring unterstützt:
 
 ---
 
-## Geplanter Abschluss j2b
+## Abschluss j2b
 
-Das Abschlussprojekt j2b ist ein Mini-Shop mit Bestellverwaltung:
+Das Abschlussprojekt j2b ist ein Mini-Shop mit Bestellverwaltung und liegt unter:
 
-- fachlich: Produkt, Kategorie, Kunde, Bestellung, Bestellposition, Bestand prüfen und reduzieren, Bestellungen anzeigen
-- technisch: REST, DTOs, Validation, Dependency Injection, JPA, Spring Data, Integrationstests
-- nicht enthalten: Security, Login, Authentication, Authorization, JWT/OAuth, Frontend, Payment, Rabatte, Versand, Rechnungen, Retouren, Microservices
+```text
+Projekte/Mini_Shop_Bestellverwaltung/
+```
 
 j3a startet danach mit Security:
 

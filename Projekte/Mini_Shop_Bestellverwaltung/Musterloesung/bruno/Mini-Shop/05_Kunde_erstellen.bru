@@ -1,0 +1,22 @@
+meta {
+  name: 05 Kunde erstellen
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/kunden
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Alan Turing",
+    "email": "alan@example.com"
+  }
+}

@@ -1,0 +1,27 @@
+meta {
+  name: 07 Bestellung erstellen
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://localhost:8080/bestellungen
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "kundeId": 1,
+    "positionen": [
+      {
+        "produktId": 1,
+        "menge": 2
+      }
+    ]
+  }
+}
