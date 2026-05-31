@@ -142,6 +142,22 @@ Schwerpunkt:
 - REST-Fehlerbehandlung mit `Optional.empty()` und `404` verbinden
 - Verantwortlichkeiten zwischen Repository, Service und Controller sauber halten
 
+Die Lerneinheit 52 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_Validation_REST_Requests.md`
+- Übungen: `Uebungen/Uebungen_Validation_REST_Requests.md`
+- Musterlösungen: `Musterloesungen/Loesungen_Validation_REST_Requests.md`
+- Grafik: `graphics/validation_rest_requests.svg`
+
+Schwerpunkt:
+
+- ungültige JSON-Requests früh und kontrolliert abweisen
+- Bean Validation auf Request-DTOs einsetzen
+- `@Valid` und `BindingResult` im REST Controller verwenden
+- einfache `400 Bad Request`-Antworten mit `ErrorResponse` zurückgeben
+- Validation klar von Fachlogik im Service trennen
+- Bruno und `curl -i` zur Prüfung von Validierungsfehlern einsetzen
+
 Das Integrationsprojekt ist erstellt:
 
 - Projektübersicht: `Projekte/REST_Lagerverwaltung_Erweitern/README.md`
@@ -164,7 +180,6 @@ Schwerpunkt:
 
 ## Nächste geplante Einheiten
 
-52. Validation bei REST-Requests
 53. Services mit Spring sauber integrieren
 54. Vorbereitung auf JPA und Spring Data
 
@@ -229,7 +244,7 @@ Spring unterstützt:
 ## Offene didaktische Entscheidungen
 
 - DTOs bewusst klein und kontrolliert einführen
-- Validation erst nach DTO-Verständnis vertiefen
+- Validation bleibt zunächst request-nah und einfach
 - JPA erst nach stabiler REST-Struktur behandeln
 - Spring weiterhin kontrolliert und transparent einsetzen
 - HTTP und REST weiterhin technisch nachvollziehbar halten

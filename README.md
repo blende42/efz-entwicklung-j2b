@@ -58,7 +58,6 @@ Vorausgesetzt werden:
 
 # Nächste Themenblöcke
 
-- Validation bei REST-Requests
 - Dependency Injection
 - Spring-Konfiguration
 - Vorbereitung auf JPA/Spring Data
@@ -167,6 +166,24 @@ Fokus:
 - `isPresent()`, `isEmpty()`, `orElse()` und `orElseThrow()` einfach verwenden
 - REST-Fehlerbehandlung mit `Optional.empty()` und `404` verbinden
 - Verantwortlichkeiten zwischen Repository, Service und Controller sauber halten
+
+---
+
+## 52. Validation bei REST-Requests
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Validation_REST_Requests.md)
+- [Übungen](Uebungen/Uebungen_Validation_REST_Requests.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Validation_REST_Requests.md)
+- [Grafik](graphics/validation_rest_requests.svg)
+
+Fokus:
+- ungültige JSON-Requests früh erkennen
+- Bean Validation auf Request-DTOs einsetzen
+- `@Valid` und `BindingResult` im REST Controller verwenden
+- einfache `400 Bad Request`-Antworten mit `ErrorResponse` zurückgeben
+- Validation von Fachlogik im Service trennen
+- Bruno und `curl -i` zur Prüfung von Validierungsfehlern einsetzen
 
 ---
 

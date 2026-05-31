@@ -131,11 +131,19 @@ Fokus:
 
 ### 52. Validation bei REST-Requests
 
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Validation_REST_Requests.md)
+- [Übungen](Uebungen/Uebungen_Validation_REST_Requests.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Validation_REST_Requests.md)
+- [Grafik](graphics/validation_rest_requests.svg)
+
 Fokus:
-- Eingabevalidierung
-- fehlerhafte Requests
-- einfache Bean Validation
-- kontrollierte Fehlermeldungen
+- Eingabevalidierung auf Request-DTOs
+- fehlerhafte JSON-Requests als `400 Bad Request`
+- einfache Bean Validation mit `@NotBlank`, `@PositiveOrZero` und `@NotNull`
+- `@Valid` und `BindingResult` im REST Controller
+- kontrollierte Fehlermeldungen mit `ErrorResponse`
+- Trennung zwischen Validation und Fachlogik
 
 ---
 

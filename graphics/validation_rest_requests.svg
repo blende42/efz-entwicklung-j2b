@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Validation bei REST-Requests</title>
+  <desc id="desc">Die Grafik zeigt, wie ein JSON-Request über Request-DTO und Validation entweder als 400-Fehlerantwort endet oder als gültige Eingabe an Service und Repository weitergegeben wird.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #17324d; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #17324d; }
+      .text { font-family: Arial, sans-serif; font-size: 16px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 15px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #7a3e00; }
+      .panel { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelBlue { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .panelOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .panelRed { fill: #fff0f0; stroke: #c95454; stroke-width: 2.5; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineGreen { stroke: #6aa84f; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .lineOrange { stroke: #d9903d; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+      .lineRed { stroke: #c95454; stroke-width: 3; fill: none; marker-end: url(#arrowRed); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6aa84f"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d9903d"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#c95454"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="960"/>
+
+  <text x="800" y="54" text-anchor="middle" class="title">Validation bei REST-Requests</text>
+  <text x="800" y="86" text-anchor="middle" class="subtitle">Ungültige Eingaben früh erkennen und kontrolliert mit 400 beantworten</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="150" width="300" height="135" rx="18" class="panelBlue"/>
+  </g>
+  <text x="240" y="194" text-anchor="middle" class="boxTitle">Client</text>
+  <text x="240" y="230" text-anchor="middle" class="code">POST /produkte</text>
+  <text x="240" y="262" text-anchor="middle" class="small">JSON-Body</text>
+
+  <g filter="url(#shadow)">
+    <rect x="520" y="150" width="340" height="135" rx="18" class="panel"/>
+  </g>
+  <text x="690" y="194" text-anchor="middle" class="boxTitle">Request-DTO</text>
+  <text x="690" y="230" text-anchor="middle" class="code">ProduktCreateRequest</text>
+  <text x="690" y="262" text-anchor="middle" class="small">@NotBlank, @PositiveOrZero, @NotNull</text>
+
+  <g filter="url(#shadow)">
+    <rect x="995" y="150" width="340" height="135" rx="18" class="panelOrange"/>
+  </g>
+  <text x="1165" y="194" text-anchor="middle" class="boxTitle">Controller</text>
+  <text x="1165" y="230" text-anchor="middle" class="code">@Valid + BindingResult</text>
+  <text x="1165" y="262" text-anchor="middle" class="small">prüft vor dem Service-Aufruf</text>
+
+  <path d="M390 218 C430 218, 480 218, 520 218" class="line"/>
+  <path d="M860 218 C905 218, 950 218, 995 218" class="lineOrange"/>
+
+  <g filter="url(#shadow)">
+    <rect x="220" y="450" width="430" height="180" rx="18" class="panelRed"/>
+  </g>
+  <text x="435" y="493" text-anchor="middle" class="boxTitle">Ungültiger Request</text>
+  <text x="435" y="532" text-anchor="middle" class="code">bindingResult.hasErrors()</text>
+  <text x="435" y="570" text-anchor="middle" class="small">leerer Name, negativer Preis oder fehlender Status</text>
+  <text x="435" y="606" text-anchor="middle" class="code">400 Bad Request</text>
+
+  <g filter="url(#shadow)">
+    <rect x="870" y="450" width="430" height="180" rx="18" class="panelGreen"/>
+  </g>
+  <text x="1085" y="493" text-anchor="middle" class="boxTitle">Gültiger Request</text>
+  <text x="1085" y="532" text-anchor="middle" class="code">produktService.erstellen(...)</text>
+  <text x="1085" y="570" text-anchor="middle" class="small">Service erhält geprüfte Eingaben</text>
+  <text x="1085" y="606" text-anchor="middle" class="code">201 Created</text>
+
+  <path d="M1080 285 C980 360, 705 420, 650 500" class="lineRed"/>
+  <path d="M1165 285 C1185 360, 1150 410, 1085 450" class="lineGreen"/>
+
+  <g filter="url(#shadow)">
+    <rect x="220" y="720" width="430" height="115" rx="18" class="panelRed"/>
+  </g>
+  <text x="435" y="763" text-anchor="middle" class="boxTitle">ErrorResponse</text>
+  <text x="435" y="800" text-anchor="middle" class="code">VALIDATION_FAILED</text>
+
+  <g filter="url(#shadow)">
+    <rect x="870" y="720" width="430" height="115" rx="18" class="panel"/>
+  </g>
+  <text x="1085" y="763" text-anchor="middle" class="boxTitle">Service und Repository</text>
+  <text x="1085" y="800" text-anchor="middle" class="small">Fachlogik und Datenzugriff bleiben getrennt</text>
+
+  <path d="M435 630 C435 660, 435 690, 435 720" class="lineRed"/>
+  <path d="M1085 630 C1085 660, 1085 690, 1085 720" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="160" y="875" width="1280" height="56" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="800" y="910" text-anchor="middle" class="note">Validation prüft einfache Eingaben. Fachlogik bleibt im Service.</text>
+</svg>
