@@ -61,6 +61,13 @@ Notiere:
 - Wird damit ein Service oder Repository erzeugt?
 - Welche Klasse kennt dadurch zu viel?
 
+Hinweis:
+
+```text
+Konzentriere dich auf Anwendungscode im Controller und Service.
+`new` in einfachen Unit-Tests ist weiterhin erlaubt, weil dort gezielt ohne Spring-Kontext getestet wird.
+```
+
 ---
 
 ### Aufgabe 2: `ProduktService` mit `@Service` markieren

@@ -209,6 +209,14 @@ public class ProduktService {
 
 Der Service darf Fachobjekte erzeugen, wenn das fachlich zu seiner Aufgabe passt. Er soll aber nicht das Repository mit `new ProduktRepository()` erzeugen.
 
+Eine wichtige Abgrenzung:
+
+```text
+In einfachen Unit-Tests darf ein Service weiterhin mit new erzeugt werden.
+Dort wird gezielt ohne Spring getestet.
+In der laufenden REST-Anwendung übernimmt Spring die Verdrahtung.
+```
+
 ---
 
 ## Repository bleibt für Datenzugriff zuständig

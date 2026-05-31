@@ -32,6 +32,13 @@ Der Controller weiss dadurch zu viel über die technische Erzeugung der Anwendun
 
 Nach der Umstellung soll der Controller den Service nur noch als Abhängigkeit verlangen.
 
+Abgrenzung:
+
+```text
+In Unit-Tests darf ein ProduktService weiterhin mit new erzeugt werden.
+Das ist keine Spring-Verdrahtung der Anwendung, sondern ein gezielter Test ohne Spring-Kontext.
+```
+
 ---
 
 ### Lösung 2: `ProduktService` mit `@Service` markieren
