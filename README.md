@@ -56,9 +56,8 @@ Vorausgesetzt werden:
 
 ---
 
-# Geplante Themenblöcke
+# Nächste Themenblöcke
 
-- REST-Fehlerbehandlung
 - Validation bei REST-Requests
 - Dependency Injection
 - Spring-Konfiguration
@@ -230,6 +229,7 @@ Zusätzliche didaktische Dokumentation.
 ### docs/didaktik/
 
 Didaktische Leitideen, Entwicklungslogik und qualitative Bewertungskriterien:
+- [Entwicklungslogik](docs/didaktik/entwicklungslogik.md)
 - [Bewertungskriterien](docs/didaktik/bewertungskriterien.md)
 
 ### docs/prozesse/

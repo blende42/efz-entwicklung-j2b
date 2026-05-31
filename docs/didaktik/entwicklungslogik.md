@@ -31,6 +31,17 @@ Grundlagen
 -> technisches Logging als Beobachtbarkeit
 -> technische Konfiguration als flexible Infrastruktur
 -> Mehrsprachigkeit mit Locale und ResourceBundle
+-> REST-Einstieg mit Spring Boot
+-> HTTP-Grundlagen und API-Workflows
+-> DTOs und kontrollierte JSON-Strukturen
+-> Collections im REST-/DTO-Kontext
+-> Streams für Transformationen
+-> Enums für kontrollierte Zustände
+-> REST-Fehlerbehandlung und Statuscodes
+-> Optional und kontrollierte Null-Behandlung
+-> Validation bei REST-Requests
+-> Services mit Spring und Dependency Injection
+-> Vorbereitung auf JPA und Spring Data
 ```
 
 ## Grundlagen und Datenstrukturen
@@ -73,6 +84,24 @@ Diese Reihenfolge vermeidet zu frühe Architekturbegriffe. Lernende sehen zuerst
 Projektarbeit wird erst nach diesen Grundlagen sinnvoll, weil ein Projekt mehrere Konzepte gleichzeitig verlangt: Daten modellieren, Sammlungen verwalten, Methoden schreiben, testen, speichern, Verantwortlichkeiten trennen und Code schrittweise verbessern.
 
 Das Projekt-Review folgt darauf, weil die Qualität nicht nur am Ergebnis sichtbar wird. Im Review können Lernende erklären, warum Klassen existieren, wo Fachlogik liegt, wie Tests eingesetzt wurden und welche Strukturentscheidungen noch verbessert werden könnten.
+
+## Qualitative Bewertung und Architekturgespräche
+
+Bewertung macht sichtbar, worauf bei Lösungen geachtet wird. Es zählt nicht nur, ob eine Lösung funktioniert, sondern auch, ob sie nachvollziehbar aufgebaut ist und zum Lernziel passt.
+
+Die Standardbereiche bleiben bewusst einfach:
+
+- Funktionalität
+- Verantwortlichkeiten
+- Verständlichkeit
+- Technische Sauberkeit
+- Lernzielerreichung
+
+Diese Bereiche eignen sich für Übungen, Projekte, Reviews und Architekturgespräche. In Architekturgesprächen begründen Lernende zum Beispiel, warum eine Klasse existiert, welche Verantwortung ein Service übernimmt oder weshalb ein Repository nicht direkt aus dem Controller verwendet werden soll.
+
+Die Bewertung bleibt qualitativ. Sie ist nicht punkte- oder notenorientiert, sondern unterstützt eine klare technische Rückmeldung: Was ist bereits tragfähig, was ist noch unklar und was ist der nächste sinnvolle Verbesserungsschritt?
+
+Grössere Übungen, Projekte und Reviews nutzen deshalb sichtbare Bewertungsschwerpunkte. Diese Schwerpunkte sollen Orientierung geben, aber keine unnötig komplizierten Bewertungsraster erzwingen.
 
 ## Warum jetzt eine Festigungsphase folgt
 
@@ -174,6 +203,52 @@ Der Einstieg bleibt bewusst klein:
 
 I18N wird nicht als Web-, Spring- oder Framework-Thema eingeführt. Die Lernenden sehen zuerst nur den Strukturgedanken: gleicher Java-Code, gleiche Fachlogik, andere sichtbare Texte je nach Sprache.
 
+## Vom lokalen Programm zur HTTP-API
+
+Nach Konfiguration, I18N, Repositorys und Services kann die bekannte Anwendung über HTTP erreichbar gemacht werden. REST erweitert die Anwendung um eine externe Schnittstelle, ersetzt aber nicht die bisherige Architektur.
+
+Spring Boot wird als Infrastruktur eingeführt. Es startet die Anwendung, nimmt HTTP-Anfragen entgegen und verbindet die technischen Teile. Die fachliche Struktur bleibt sichtbar: Controller, Service und Repository haben unterschiedliche Aufgaben.
+
+Der Controller ist die neue Zugriffsschicht. Er übersetzt HTTP-Anfragen in Aufrufe der Anwendung und gibt HTTP-Antworten zurück. Der Service bleibt für Fachlogik zuständig. Das Repository bleibt für Datenzugriff und Persistenz verantwortlich.
+
+`curl` und Bruno machen HTTP und JSON sichtbar und reproduzierbar. Lernende können damit prüfen, welche Anfrage gesendet wird, welcher Statuscode zurückkommt und wie die JSON-Struktur aussieht.
+
+### DTOs und JSON-Strukturen
+
+DTOs werden eingeführt, weil interne Fachobjekte nicht automatisch die passende öffentliche API-Struktur sind. Eine REST-API muss kontrollieren, welche Felder nach aussen sichtbar sind und welche Daten bei Eingaben angenommen werden.
+
+Das Mapping bleibt zuerst bewusst manuell. So sehen Lernende, wo interne Fachobjekte enden, wo DTOs beginnen und welche Verantwortung nicht in den Controller hineinwachsen soll.
+
+### Collections, Streams und Enums im REST-Kontext
+
+Collections werden im REST-/DTO-Kontext wichtig, sobald eine API mehrere Objekte zurückgibt oder Werte strukturiert verwalten muss. `List`, `Set` und `Map` werden nicht isoliert behandelt, sondern an konkreten API- und DTO-Beispielen unterschieden.
+
+Streams folgen danach als kontrollierte Transformation von Collections. Besonders DTO-Mapping, Filterung und Rückgabe von REST-Listen zeigen, warum `map()`, `filter()` und `toList()` hilfreich sein können.
+
+Enums machen kontrollierte Zustände sichtbar. Statt magischer Strings verwendet die Anwendung einen begrenzten Wertebereich, zum Beispiel für einen Produktstatus. Dadurch werden Fachmodell, DTOs und JSON-Ausgabe stabiler und besser prüfbar.
+
+### REST-Fehlerbehandlung und Optional
+
+REST benötigt kontrollierte Fehlerantworten. Ein Fehler soll nicht als Konsolentext verschwinden, sondern als passender HTTP-Statuscode und verständlicher JSON-Body zurückkommen.
+
+Statuscodes wie `200`, `201`, `400`, `404` und `500` werden deshalb an konkreten Fällen eingeführt. `ResponseEntity` macht sichtbar, dass eine Antwort aus Statuscode und Inhalt besteht.
+
+`Optional<T>` ergänzt diese Linie, weil fehlende Werte nicht still mit `null` modelliert werden sollen. Repository und Service können dadurch bewusst ausdrücken, dass ein Produkt vorhanden sein kann oder fehlt. Der Controller übersetzt diesen Fall dann kontrolliert in eine REST-Antwort, zum Beispiel `404`.
+
+### Validation als kontrollierte Eingabeprüfung
+
+Nach DTOs, Fehlerbehandlung und Optional folgt Validation als nächster Schritt. Eingaben werden nicht mehr nur technisch entgegengenommen, sondern vor der fachlichen Verarbeitung geprüft.
+
+Validation bleibt zuerst einfach und request-nah. Lernende sollen verstehen, welche Eingaben für eine API gültig sind, wie fehlerhafte Requests erkennbar werden und wie daraus nachvollziehbare Fehlermeldungen entstehen.
+
+### Spring Services, Dependency Injection und Vorbereitung auf JPA
+
+Spring soll bestehende Services nicht ersetzen, sondern sauber integrieren. Dependency Injection wird deshalb erst sinnvoll, wenn Controller, Service und Repository bereits als Verantwortlichkeiten bekannt sind.
+
+Die Anwendung wächst damit von manuell zusammengesetzten Objekten zu Spring-verwalteten Komponenten. Dieser Schritt soll transparent bleiben: Lernende sollen weiterhin erklären können, welche Klasse welche Aufgabe hat und warum Abhängigkeiten nicht zufällig im Code erzeugt werden.
+
+JPA und Spring Data werden vorbereitet, aber nicht vorweggenommen. Erst wenn JDBC, Mapping, Repositorys und REST-Struktur stabil verstanden sind, kann sinnvoll diskutiert werden, welche Arbeit ein ORM abnimmt und welche Architekturentscheidungen trotzdem sichtbar bleiben müssen.
+
 ## Architekturbegriffe aus echten Problemen
 
 Neue Architekturbegriffe werden nicht abstrakt vorangestellt. Zuerst entsteht ein konkretes Problem im Code, danach erhält die passende Struktur einen Namen. So bleibt der Begriff an Erfahrung gebunden.
@@ -186,32 +261,29 @@ Beispiele:
 - Ein Repository wird sinnvoll, wenn JDBC- und Mapping-Code durch mehrere Tabellen wächst.
 - Technische Konfiguration wird sinnvoll, wenn DB-URLs, Dateipfade und technische Modi nicht mehr hartcodiert im Code stehen sollen.
 - I18N wird sinnvoll, wenn sichtbare Texte nicht mehr hartcodiert im Code stehen sollen.
+- Ein Controller wird sinnvoll, wenn eine Anwendung über HTTP erreichbar wird.
+- Ein DTO wird sinnvoll, wenn interne Fachobjekte und externe JSON-Strukturen nicht identisch sein sollen.
+- REST-Fehlerbehandlung wird sinnvoll, wenn Fehler als HTTP-Antworten kontrolliert sichtbar werden müssen.
+- `Optional<T>` wird sinnvoll, wenn fehlende Werte explizit modelliert werden sollen.
+- Validation wird sinnvoll, wenn fehlerhafte Eingaben vor der Fachlogik erkannt werden sollen.
+- Dependency Injection wird sinnvoll, wenn Spring bestehende Services und Repositorys kontrolliert zusammensetzt.
+- JPA und Spring Data werden sinnvoll, wenn JDBC-Mapping verstanden ist und Persistenz weiter abstrahiert werden soll.
 
 Damit lernen die Lernenden Architektur nicht als Sammlung grosser Begriffe, sondern als Werkzeug zur Lösung konkreter Strukturprobleme.
 
 ## Bewusste Nicht-Ziele
 
-Für den Datenbank- und Repository-Einstieg werden bewusst nicht eingeführt:
+Die Reihe bleibt bewusst auf EFZ-Niveau und führt neue Konzepte nur ein, wenn sie aus dem aktuellen Codeproblem entstehen. Für die REST- und Spring-Linie werden deshalb bewusst nicht eingeführt:
 
-- kein Spring
-- keine Dependency Injection
-- kein ORM
-- kein Hibernate
-- kein JPA
-- kein Spring Data Repository
-- kein generisches Repository
-- keine automatische Query-Generierung
-- kein formales Repository Pattern
-- keine komplexe Clean Architecture
-- keine komplexen Frameworks
-- keine zu frühe REST-API
-- keine Spring-Konfiguration
-- keine YAML-Konfiguration
-- keine vertiefte Docker- oder Kubernetes-Konfiguration
-- keine Web-I18N
-- keine komplexen Übersetzungsframeworks
-- keine automatische Übersetzung
+- keine Security
+- kein JWT/OAuth
+- keine Microservices
+- keine komplexe Spring-Architektur
+- keine JPA vor stabiler REST-Struktur
+- keine automatischen Mapping-Frameworks
+- keine komplexen Validation-Szenarien
+- keine verteilten Systeme
 
-Repository wird nur einfach als strukturierter Datenzugriff eingeführt: JDBC-Code, SQL-Anweisungen und Mapping werden an einem nachvollziehbaren Ort gebündelt. Es geht nicht um Framework-Magie, automatische Persistenz oder Enterprise-Architektur.
+Repository bleibt zuerst als strukturierter Datenzugriff verständlich: JDBC-Code, SQL-Anweisungen und Mapping werden an einem nachvollziehbaren Ort gebündelt. Spring, Dependency Injection, Validation und später JPA/Spring Data werden darauf aufbauend eingeführt, nicht als Ersatz für dieses Verständnis.
 
-Der Fokus bleibt auf EFZ-Niveau: kleine Java-Programme, klare Verantwortlichkeiten, einfache Tests und nachvollziehbare Strukturentscheidungen.
+Der Fokus bleibt auf EFZ-Niveau: kleine Java-Programme, klare Verantwortlichkeiten, einfache Tests, nachvollziehbare REST-Abläufe und begründbare Strukturentscheidungen.

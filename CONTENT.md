@@ -198,6 +198,7 @@ Neue Konzepte entstehen aus:
 
 ## Didaktische Referenzen
 
+- [Entwicklungslogik](docs/didaktik/entwicklungslogik.md): roter Faden von Java-Grundlagen über Persistenz, REST/Spring, DTOs, Fehlerbehandlung und Optional bis zur Vorbereitung auf Validation, Dependency Injection und JPA/Spring Data
 - [Bewertungskriterien](docs/didaktik/bewertungskriterien.md): Standard für qualitative Rückmeldung und sichtbare Bewertungsschwerpunkte in grösseren Übungen, Projekten und Reviews ohne Punkte- oder Notenlogik
 
 ---
@@ -237,9 +238,12 @@ Neue Konzepte entstehen aus:
 # Noch bewusst NICHT enthalten
 
 - Spring Security
-- OAuth/JWT
+- JWT/OAuth
 - Microservices
 - verteilte Systeme
+- komplexe Spring-Architektur
+- automatische Mapping-Frameworks
+- komplexe Validation-Szenarien
 - Kubernetes
 - Cloud-Architektur
 - Event-Driven Architecture
