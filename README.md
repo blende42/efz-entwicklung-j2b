@@ -11,7 +11,7 @@ Der Schwerpunkt liegt auf:
 - Validation
 - Fehlerbehandlung
 - sauberer Backend-Architektur
-- Vorbereitung auf JPA/Spring Data
+- JPA/Spring Data als Persistenzabschluss
 
 Die Ausbildung bleibt:
 - problemgetrieben
@@ -58,9 +58,9 @@ Vorausgesetzt werden:
 
 # Nächste Themenblöcke
 
-- Spring-Konfiguration
-- Vorbereitung auf JPA/Spring Data
+- JPA und Spring Data Grundlagen
 - Integrationstests
+- Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
 ---
 
@@ -201,6 +201,75 @@ Fokus:
 - manuelle `new`-Aufrufe für Services und Repositorys vermeiden
 - Fachlogik im Service und Datenzugriff im Repository belassen
 - bestehende Bruno- und `curl`-Prüfungen nach der DI-Umstellung erneut ausführen
+
+---
+
+## 54. Spring Container und Dependency Injection verstehen
+
+Erstellt:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Spring_Container_DI_Verstehen.md)
+- [Übungen](Uebungen/Uebungen_Spring_Container_DI_Verstehen.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Spring_Container_DI_Verstehen.md)
+- [Grafik](graphics/spring_container_di_verstehen.svg)
+
+Fokus:
+- manuelle Verdrahtung mit Spring-Verdrahtung vergleichen
+- Spring Container als einfache Objektverwaltung verstehen
+- Objektgraphen ohne und mit Spring lesen
+- Architektur und Verdrahtung unterscheiden
+- Constructor Injection als sichtbare Abhängigkeit einordnen
+- auf JPA und Spring Data vorbereiten, ohne JPA einzuführen
+
+---
+
+# Geplanter Abschluss j2b
+
+## 55. JPA und Spring Data Grundlagen
+
+Geplant:
+- JPA-Entity als persistentes Fachobjekt
+- Spring Data Repositorys
+- CRUD-Zugriffe über bestehende Services
+- Vorbereitung auf mehrere zusammenhängende Fachobjekte
+
+## 56. Integrationstests
+
+Geplant:
+- REST-Endpunkte automatisiert prüfen
+- Zusammenspiel von Controller, Service, Repository und Datenbank testen
+- erfolgreiche Abläufe und Fehlerfälle absichern
+
+## 57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
+
+Fachlicher Rahmen:
+- Produkt
+- Kategorie
+- Kunde
+- Bestellung
+- Bestellposition
+- Bestand prüfen
+- Bestand reduzieren
+- Bestellungen anzeigen
+
+Technische Konsolidierung:
+- REST
+- DTOs
+- Validation
+- Dependency Injection
+- JPA
+- Spring Data
+- Integrationstests
+
+Bewusst nicht enthalten:
+- Security, Login, Authentication, Authorization, JWT/OAuth
+- Frontend, Payment, Rabatte, Versand, Rechnungen, Retouren
+- Microservices
+
+Anschluss an j3a:
+
+```text
+Der Mini-Shop funktioniert, aber wer darf was?
+```
 
 ---
 

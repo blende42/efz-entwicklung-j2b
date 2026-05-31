@@ -41,7 +41,11 @@ Grundlagen
 -> Optional und kontrollierte Null-Behandlung
 -> Validation bei REST-Requests
 -> Services mit Spring und Dependency Injection
--> Vorbereitung auf JPA und Spring Data
+-> Spring Container und Dependency Injection verstehen
+-> JPA und Spring Data Grundlagen
+-> Integrationstests
+-> Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
+-> j3a startet mit Security: Wer darf was?
 ```
 
 ## Grundlagen und Datenstrukturen
@@ -247,7 +251,58 @@ Spring soll bestehende Services nicht ersetzen, sondern sauber integrieren. Depe
 
 Die Anwendung wächst damit von manuell zusammengesetzten Objekten zu Spring-verwalteten Komponenten. Dieser Schritt soll transparent bleiben: Lernende sollen weiterhin erklären können, welche Klasse welche Aufgabe hat und warum Abhängigkeiten nicht zufällig im Code erzeugt werden.
 
+Der Spring Container wird danach als mentales Modell gefestigt. Lernende vergleichen manuelle Verdrahtung mit `new` und Spring-Verdrahtung über Constructor Injection. Die Architektur bleibt gleich:
+
+```text
+Controller -> Service -> Repository
+```
+
+Nur die Objekterzeugung und Verdrahtung wechseln zur Infrastruktur.
+
 JPA und Spring Data werden vorbereitet, aber nicht vorweggenommen. Erst wenn JDBC, Mapping, Repositorys und REST-Struktur stabil verstanden sind, kann sinnvoll diskutiert werden, welche Arbeit ein ORM abnimmt und welche Architekturentscheidungen trotzdem sichtbar bleiben müssen.
+
+## Geplanter Abschluss von j2b
+
+Der Abschluss von `efz-entwicklung-j2b` konsolidiert die REST-/Spring-Linie in drei Schritten:
+
+```text
+55. JPA und Spring Data Grundlagen
+56. Integrationstests
+57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
+```
+
+JPA und Spring Data werden nach der DI-Festigung eingeführt. Der Fokus liegt auf persistierbaren Fachobjekten, einfachen Repository-Zugriffen und der Frage, welche Persistenzarbeit Spring Data übernimmt, ohne Service- und Controller-Verantwortlichkeiten zu ersetzen.
+
+Integrationstests folgen danach, weil nun mehrere Schichten zusammenarbeiten: REST-Controller, DTOs, Validation, Services, Spring Data Repositorys und Datenbank. Die Tests sollen nicht nur einzelne Methoden prüfen, sondern typische API-Abläufe und Fehlerfälle absichern.
+
+Das Abschlussprojekt j2b ist ein Mini-Shop mit Bestellverwaltung. Der fachliche Rahmen bleibt bewusst überschaubar:
+
+- Produkt
+- Kategorie
+- Kunde
+- Bestellung
+- Bestellposition
+- Bestand prüfen
+- Bestand reduzieren
+- Bestellungen anzeigen
+
+Technisch konsolidiert das Projekt:
+
+- REST
+- DTOs
+- Validation
+- Dependency Injection
+- JPA
+- Spring Data
+- Integrationstests
+
+Das Projekt schliesst j2b ab. Danach startet j3a mit Security:
+
+```text
+Der Mini-Shop funktioniert, aber wer darf was?
+```
+
+Damit ist Security didaktisch motiviert, aber nicht Teil des j2b-Abschlusses.
 
 ## Architekturbegriffe aus echten Problemen
 
@@ -267,7 +322,10 @@ Beispiele:
 - `Optional<T>` wird sinnvoll, wenn fehlende Werte explizit modelliert werden sollen.
 - Validation wird sinnvoll, wenn fehlerhafte Eingaben vor der Fachlogik erkannt werden sollen.
 - Dependency Injection wird sinnvoll, wenn Spring bestehende Services und Repositorys kontrolliert zusammensetzt.
+- Spring Container wird sinnvoll, wenn Objekterzeugung und Verdrahtung als eigenes mentales Modell verstanden werden müssen.
 - JPA und Spring Data werden sinnvoll, wenn JDBC-Mapping verstanden ist und Persistenz weiter abstrahiert werden soll.
+- Integrationstests werden sinnvoll, wenn REST, Validation, Services, Repositorys und Datenbank zusammen geprüft werden müssen.
+- Das Abschlussprojekt wird sinnvoll, wenn die technischen Einzelthemen in einem fachlich zusammenhängenden Mini-Shop konsolidiert werden sollen.
 
 Damit lernen die Lernenden Architektur nicht als Sammlung grosser Begriffe, sondern als Werkzeug zur Lösung konkreter Strukturprobleme.
 
@@ -276,10 +334,19 @@ Damit lernen die Lernenden Architektur nicht als Sammlung grosser Begriffe, sond
 Die Reihe bleibt bewusst auf EFZ-Niveau und führt neue Konzepte nur ein, wenn sie aus dem aktuellen Codeproblem entstehen. Für die REST- und Spring-Linie werden deshalb bewusst nicht eingeführt:
 
 - keine Security
+- kein Login
+- keine Authentication
+- keine Authorization
 - kein JWT/OAuth
+- kein Frontend
+- kein Payment
+- keine Rabatte
+- kein Versand
+- keine Rechnungen
+- keine Retouren
 - keine Microservices
 - keine komplexe Spring-Architektur
-- keine JPA vor stabiler REST-Struktur
+- keine JPA vor stabiler REST- und DI-Struktur
 - keine automatischen Mapping-Frameworks
 - keine komplexen Validation-Szenarien
 - keine verteilten Systeme

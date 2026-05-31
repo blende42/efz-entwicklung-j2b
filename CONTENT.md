@@ -10,6 +10,7 @@ Dieses Repository vertieft:
 - Validation
 - Fehlerbehandlung
 - Integration von Spring in bestehende Architektur
+- JPA/Spring Data und Integrationstests als Abschluss von j2b
 
 Das Repository baut direkt auf:
 `efz-entwicklung-j2a`
@@ -166,13 +167,87 @@ Fokus:
 
 ---
 
-### 54. Vorbereitung auf JPA und Spring Data
+### 54. Spring Container und Dependency Injection verstehen
+
+Material:
+- [Arbeitsblatt](Arbeitsblaetter/Arbeitsblatt_Spring_Container_DI_Verstehen.md)
+- [Übungen](Uebungen/Uebungen_Spring_Container_DI_Verstehen.md)
+- [Musterlösungen](Musterloesungen/Loesungen_Spring_Container_DI_Verstehen.md)
+- [Grafik](graphics/spring_container_di_verstehen.svg)
 
 Fokus:
-- Persistenzabstraktion
-- Repository-Idee vertiefen
-- Motivation für ORM
-- Grenzen von JDBC diskutieren
+- Spring Container als einfache Infrastruktur
+- manuelle Verdrahtung mit `new`
+- Objektgraph ohne und mit Spring
+- Constructor Injection als sichtbare Abhängigkeit
+- Architektur bleibt Controller, Service, Repository
+- Vorbereitung auf JPA/Spring Data
+
+---
+
+### 55. JPA und Spring Data Grundlagen
+
+Fokus:
+- JPA-Entity als persistentes Fachobjekt
+- einfache Beziehungen vorbereiten
+- Spring Data Repositorys einführen
+- bestehende Service-Struktur beibehalten
+- CRUD-Zugriffe mit Spring Data nachvollziehen
+
+---
+
+### 56. Integrationstests
+
+Fokus:
+- REST-Endpunkte mit Spring Boot testen
+- Zusammenspiel von Controller, Service, Repository und Datenbank prüfen
+- Testdaten kontrolliert vorbereiten
+- erfolgreiche Abläufe und Fehlerfälle absichern
+- Bruno-Workflows und automatisierte Tests unterscheiden
+
+---
+
+### 57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
+
+Fachlicher Rahmen:
+- Produkt
+- Kategorie
+- Kunde
+- Bestellung
+- Bestellposition
+- Bestand prüfen
+- Bestand reduzieren
+- Bestellungen anzeigen
+
+Technische Konsolidierung:
+- REST
+- DTOs
+- Validation
+- Dependency Injection
+- JPA
+- Spring Data
+- Integrationstests
+
+Bewusst nicht enthalten:
+- Security
+- Login
+- Authentication
+- Authorization
+- JWT/OAuth
+- Frontend
+- Payment
+- Rabatte
+- Versand
+- Rechnungen
+- Retouren
+- Microservices
+
+Didaktischer Anschluss:
+
+```text
+Das Projekt schliesst j2b ab.
+j3a startet danach mit Security: Der Mini-Shop funktioniert, aber wer darf was?
+```
 
 ---
 
@@ -215,7 +290,7 @@ Neue Konzepte entstehen aus:
 
 ## Didaktische Referenzen
 
-- [Entwicklungslogik](docs/didaktik/entwicklungslogik.md): roter Faden von Java-Grundlagen über Persistenz, REST/Spring, DTOs, Fehlerbehandlung und Optional bis zur Vorbereitung auf Validation, Dependency Injection und JPA/Spring Data
+- [Entwicklungslogik](docs/didaktik/entwicklungslogik.md): roter Faden von Java-Grundlagen über Persistenz, REST/Spring, DTOs, Fehlerbehandlung, Validation, Dependency Injection, JPA/Spring Data und Integrationstests bis zum Abschlussprojekt j2b
 - [Bewertungskriterien](docs/didaktik/bewertungskriterien.md): Standard für qualitative Rückmeldung und sichtbare Bewertungsschwerpunkte in grösseren Übungen, Projekten und Reviews ohne Punkte- oder Notenlogik
 
 ---
@@ -240,7 +315,7 @@ Neue Konzepte entstehen aus:
 
 - JDBC/H2
 - Repository
-- Vorbereitung auf JPA/Spring Data
+- JPA/Spring Data
 
 ---
 
@@ -255,7 +330,16 @@ Neue Konzepte entstehen aus:
 # Noch bewusst NICHT enthalten
 
 - Spring Security
+- Login
+- Authentication
+- Authorization
 - JWT/OAuth
+- Frontend
+- Payment
+- Rabatte
+- Versand
+- Rechnungen
+- Retouren
 - Microservices
 - verteilte Systeme
 - komplexe Spring-Architektur

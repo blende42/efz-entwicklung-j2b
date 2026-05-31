@@ -174,6 +174,22 @@ Schwerpunkt:
 - Fachlogik im Service und Datenzugriff im Repository belassen
 - bestehende Bruno- und `curl`-Prüfungen nach der DI-Umstellung erneut ausführen
 
+Die Lerneinheit 54 ist erstellt:
+
+- Arbeitsblatt: `Arbeitsblaetter/Arbeitsblatt_Spring_Container_DI_Verstehen.md`
+- Übungen: `Uebungen/Uebungen_Spring_Container_DI_Verstehen.md`
+- Musterlösungen: `Musterloesungen/Loesungen_Spring_Container_DI_Verstehen.md`
+- Grafik: `graphics/spring_container_di_verstehen.svg`
+
+Schwerpunkt:
+
+- Spring Container als einfache Objektverwaltung verstehen
+- manuelle Verdrahtung mit Spring-Verdrahtung vergleichen
+- Objektgraphen ohne und mit Spring lesen
+- Constructor Injection als sichtbare Übergabe von Abhängigkeiten erklären
+- Architektur und Verdrahtung unterscheiden
+- JPA/Spring Data vorbereiten, ohne JPA bereits einzuführen
+
 Das Integrationsprojekt ist erstellt:
 
 - Projektübersicht: `Projekte/REST_Lagerverwaltung_Erweitern/README.md`
@@ -196,7 +212,9 @@ Schwerpunkt:
 
 ## Nächste geplante Einheiten
 
-54. Vorbereitung auf JPA und Spring Data
+55. JPA und Spring Data Grundlagen
+56. Integrationstests
+57. Abschlussprojekt j2b: Mini-Shop / Bestellverwaltung
 
 ---
 
@@ -211,7 +229,7 @@ Schwerpunkt:
 - Validation
 - Dependency Injection
 - Konfiguration mit Spring
-- Vorbereitung auf JPA/Spring Data
+- JPA/Spring Data
 
 ---
 
@@ -261,6 +279,22 @@ Spring unterstützt:
 - DTOs bewusst klein und kontrolliert einführen
 - Validation bleibt zunächst request-nah und einfach
 - Dependency Injection bleibt zunächst auf Constructor Injection beschränkt
-- JPA erst nach stabiler REST-Struktur behandeln
+- JPA erst nach stabiler REST- und DI-Struktur behandeln
 - Spring weiterhin kontrolliert und transparent einsetzen
 - HTTP und REST weiterhin technisch nachvollziehbar halten
+
+---
+
+## Geplanter Abschluss j2b
+
+Das Abschlussprojekt j2b ist ein Mini-Shop mit Bestellverwaltung:
+
+- fachlich: Produkt, Kategorie, Kunde, Bestellung, Bestellposition, Bestand prüfen und reduzieren, Bestellungen anzeigen
+- technisch: REST, DTOs, Validation, Dependency Injection, JPA, Spring Data, Integrationstests
+- nicht enthalten: Security, Login, Authentication, Authorization, JWT/OAuth, Frontend, Payment, Rabatte, Versand, Rechnungen, Retouren, Microservices
+
+j3a startet danach mit Security:
+
+```text
+Der Mini-Shop funktioniert, aber wer darf was?
+```

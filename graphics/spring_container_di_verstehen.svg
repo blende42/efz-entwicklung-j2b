@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Spring Container und Dependency Injection verstehen</title>
+  <desc id="desc">Die Grafik vergleicht manuelle Verdrahtung ohne Spring mit Verdrahtung durch den Spring Container. Die Architektur bleibt Controller, Service, Repository.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7fbff; }
+      .title { font-family: Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #17324d; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 600; fill: #2b4c6f; }
+      .section { font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #17324d; }
+      .boxTitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #17324d; }
+      .text { font-family: Arial, sans-serif; font-size: 15px; fill: #1f2d3d; }
+      .small { font-family: Arial, sans-serif; font-size: 13px; fill: #1f2d3d; }
+      .code { font-family: Courier New, monospace; font-size: 15px; fill: #17324d; }
+      .note { font-family: Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #7a3e00; }
+      .panel { fill: #ffffff; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelBlue { fill: #e8f1fb; stroke: #4e79a7; stroke-width: 2.5; }
+      .panelGreen { fill: #eef7ea; stroke: #6aa84f; stroke-width: 2.5; }
+      .panelGrey { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .panelOrange { fill: #fff4e8; stroke: #d9903d; stroke-width: 2.5; }
+      .container { fill: #eef6ff; stroke: #2f6fa3; stroke-width: 3; stroke-dasharray: 12 8; }
+      .line { stroke: #4e79a7; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lineGreen { stroke: #6aa84f; stroke-width: 3; fill: none; marker-end: url(#arrowGreen); }
+      .lineOrange { stroke: #d9903d; stroke-width: 3; fill: none; marker-end: url(#arrowOrange); }
+    </style>
+
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#4e79a7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6aa84f"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d9903d"/>
+    </marker>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="960"/>
+
+  <text x="800" y="54" text-anchor="middle" class="title">Spring Container und Dependency Injection verstehen</text>
+  <text x="800" y="86" text-anchor="middle" class="subtitle">Die Architektur bleibt gleich. Die Verdrahtung ändert sich.</text>
+
+  <text x="360" y="145" text-anchor="middle" class="section">Ohne Spring: main() verdrahtet</text>
+  <text x="1240" y="145" text-anchor="middle" class="section">Mit Spring: Container verdrahtet</text>
+
+  <g filter="url(#shadow)">
+    <rect x="95" y="185" width="530" height="105" rx="18" class="panelOrange"/>
+  </g>
+  <text x="360" y="222" text-anchor="middle" class="boxTitle">main()</text>
+  <text x="360" y="254" text-anchor="middle" class="code">new Repository(), new Service(...), new Controller(...)</text>
+
+  <g filter="url(#shadow)">
+    <rect x="190" y="375" width="340" height="90" rx="16" class="panelBlue"/>
+  </g>
+  <text x="360" y="410" text-anchor="middle" class="boxTitle">ProduktController</text>
+  <text x="360" y="440" text-anchor="middle" class="small">HTTP-Request und HTTP-Response</text>
+
+  <g filter="url(#shadow)">
+    <rect x="190" y="545" width="340" height="90" rx="16" class="panelGreen"/>
+  </g>
+  <text x="360" y="580" text-anchor="middle" class="boxTitle">ProduktService</text>
+  <text x="360" y="610" text-anchor="middle" class="small">Fachlogik und Ablauf</text>
+
+  <g filter="url(#shadow)">
+    <rect x="190" y="715" width="340" height="90" rx="16" class="panelGrey"/>
+  </g>
+  <text x="360" y="750" text-anchor="middle" class="boxTitle">ProduktRepository</text>
+  <text x="360" y="780" text-anchor="middle" class="small">Datenzugriff</text>
+
+  <path d="M360 290 C360 325, 360 345, 360 375" class="lineOrange"/>
+  <path d="M360 465 C360 500, 360 515, 360 545" class="lineGreen"/>
+  <path d="M360 635 C360 670, 360 685, 360 715" class="lineGreen"/>
+  <text x="545" y="505" class="small">braucht</text>
+  <text x="545" y="675" class="small">braucht</text>
+
+  <g filter="url(#shadow)">
+    <rect x="975" y="180" width="530" height="160" rx="22" class="container"/>
+  </g>
+  <text x="1240" y="225" text-anchor="middle" class="boxTitle">Spring Container</text>
+  <text x="1240" y="258" text-anchor="middle" class="text">findet Komponenten, erzeugt Objekte, übergibt Abhängigkeiten</text>
+  <text x="1240" y="292" text-anchor="middle" class="code">@RestController  @Service  @Repository</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1070" y="375" width="340" height="90" rx="16" class="panelBlue"/>
+  </g>
+  <text x="1240" y="410" text-anchor="middle" class="boxTitle">ProduktController</text>
+  <text x="1240" y="440" text-anchor="middle" class="small">bekommt ProduktService</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1070" y="545" width="340" height="90" rx="16" class="panelGreen"/>
+  </g>
+  <text x="1240" y="580" text-anchor="middle" class="boxTitle">ProduktService</text>
+  <text x="1240" y="610" text-anchor="middle" class="small">bekommt ProduktRepository</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1070" y="715" width="340" height="90" rx="16" class="panelGrey"/>
+  </g>
+  <text x="1240" y="750" text-anchor="middle" class="boxTitle">ProduktRepository</text>
+  <text x="1240" y="780" text-anchor="middle" class="small">wird bereitgestellt</text>
+
+  <path d="M1240 340 C1240 355, 1240 365, 1240 375" class="lineOrange"/>
+  <path d="M1240 465 C1240 500, 1240 515, 1240 545" class="lineGreen"/>
+  <path d="M1240 635 C1240 670, 1240 685, 1240 715" class="lineGreen"/>
+  <text x="1425" y="505" class="small">Constructor Injection</text>
+  <text x="1425" y="675" class="small">Constructor Injection</text>
+
+  <path d="M655 590 C735 590, 865 590, 945 590" class="line"/>
+  <text x="800" y="560" text-anchor="middle" class="text">gleicher Objektgraph</text>
+
+  <g filter="url(#shadow)">
+    <rect x="180" y="875" width="1240" height="56" rx="18" fill="#fff6da" stroke="#d6a73b" stroke-width="2.5"/>
+  </g>
+  <text x="800" y="910" text-anchor="middle" class="note">Architektur bleibt gleich: Controller -&gt; Service -&gt; Repository. Verdrahtung ändert sich.</text>
+</svg>
